@@ -18,14 +18,19 @@ which is the authoritative disambiguator.
 
 ## What He Works On
 
-Current work is in **computational biology**, on two fronts that feed each other: developing
-generative and self-supervised methods (VAE families, diffusion, flow matching, JEPA) and agentic
-AI, and applying them to gene regulation, RNA splicing and decay, and perturbation modeling. The
-method work (ssl-lab, genai-lab) is deliberately not limited to the RNA applications — it targets
-computational biology broadly, including gene expression, perturbation response, and in-silico
-biological experimentation. Earlier work spans foundation-adaptor frameworks for splice
-prediction, probabilistic modeling, sequence modeling of longitudinal clinical records, and
-reinforcement learning.
+Current work is in **computational biology**, along two lines that grew up independently.
+
+The method line (ssl-lab, genai-lab) develops generative and self-supervised methods (VAE
+families, diffusion, flow matching, JEPA) and agentic AI, modality-agnostically, targeting
+computational biology broadly — gene expression, perturbation response, and in-silico biological
+experimentation.
+
+The RNA line (agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at
+Envisagenics. The methods were not developed for the RNA problems: the two lines are siblings
+rather than a pipeline, and where a method does cross over it is borrowed, not inherited.
+
+Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic modeling,
+sequence modeling of longitudinal clinical records, and reinforcement learning.
 
 The connecting idea across his work is an operator view of action: earlier work on parametric
 action formalisms recast actions as operators on state space rather than discrete symbols, and
