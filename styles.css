@@ -16,6 +16,9 @@
   --signal-dim: #7ba0cc;
   --copper:     #9a5730;
 
+  --cc-op: 0.085;     /* masthead formation */
+  --cc-op-sm: 0.055;  /* in-page formations, quieter behind body text */
+
   --measure: 36rem;   /* reading column — ~68 characters */
   --page: 62rem;      /* outer container; the schematic uses the full width */
   --rail: 6.5rem;
@@ -38,10 +41,14 @@
     --signal:     #6fa8e8;
     --signal-dim: #3c5f88;
     --copper:     #d08b5f;
+    --cc-op:      0.13;
+    --cc-op-sm:   0.085;
   }
 }
 
 :root[data-theme="dark"] {
+  --cc-op: 0.13;
+  --cc-op-sm: 0.085;
   --paper:      #0d1219;
   --plate:      #141c26;
   --ink:        #e3e9f0;
@@ -55,6 +62,8 @@
 }
 
 :root[data-theme="light"] {
+  --cc-op: 0.085;
+  --cc-op-sm: 0.055;
   --paper:      #f7f8fa;
   --plate:      #eef1f5;
   --ink:        #131a24;
@@ -124,53 +133,72 @@ a:focus-visible {
   border-radius: 1px;
 }
 
-/* --- masthead ---------------------------------------------------------- */
+/* --- crop formations ---------------------------------------------------- */
 
-/* A crop formation sits behind the masthead: a pattern found in a field that
-   looks designed, where the whole question is whether it means anything.
-   Delivered as a mask so the figure takes its colour from the theme token. */
-.masthead {
-  position: relative;
-  overflow: hidden;             /* clips the formation; also guards the page from it */
-  padding: clamp(3.5rem, 9vw, 6.5rem) 0 2.75rem;
-  margin-left: 0;
-}
+/* Five formations sit behind the page. Each is delivered as a MASK, so the figure
+   takes its colour from the theme token and one file serves light and dark.
+   A section opts in with `.field` plus a `.f-*` modifier that supplies the source,
+   the size and the corner. */
 
-.masthead::before {
+.field { position: relative; overflow: hidden; }  /* clip: also guards the page width */
+.field > * { position: relative; z-index: 1; }
+
+.field::before {
   content: "";
   position: absolute;
-  top: -13%;
-  right: -1%;
-  width: min(31rem, 74vw);
-  aspect-ratio: 1;
+  width: var(--f-w);
+  aspect-ratio: var(--f-ar, 1);
+  top: var(--f-top, auto);
+  right: var(--f-right, auto);
+  bottom: var(--f-bottom, auto);
+  left: var(--f-left, auto);
   background-color: var(--signal);
-  opacity: 0.085;
-  /* Two mask layers intersected: the formation, and a radial fade so it
-     dissolves into the page instead of meeting the clip edge as a hard line. */
-  -webkit-mask-image: url("assets/crop-field.svg"),
-                      radial-gradient(ellipse at 52% 44%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
-  mask-image: url("assets/crop-field.svg"),
-              radial-gradient(ellipse at 52% 44%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
+  opacity: var(--f-op, var(--cc-op-sm));
+  /* Two mask layers intersected: the formation, and a radial fade so it dissolves
+     into the page instead of meeting the clip edge as a hard line. */
+  -webkit-mask-image: var(--f-src),
+                      radial-gradient(ellipse at 52% 46%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
+  mask-image: var(--f-src),
+              radial-gradient(ellipse at 52% 46%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
   -webkit-mask-size: contain, 100% 100%;
   mask-size: contain, 100% 100%;
   -webkit-mask-repeat: no-repeat, no-repeat;
   mask-repeat: no-repeat, no-repeat;
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
-  /* Pinned, not left to match-source: the SVG is coloured so it previews on its
-     own, and only its alpha may be allowed to matter. */
+  /* Pinned, not left to match-source: the SVGs are coloured so they preview on
+     their own, and only their alpha may be allowed to matter. */
   mask-mode: alpha, alpha;
   pointer-events: none;
   z-index: 0;
 }
 
-.masthead > * { position: relative; z-index: 1; }
+/* Zeals Knoll nr Mere, 5 Jul 2026 - bubbles read as nested worlds */
+.f-cosmos   { --f-src: url("assets/crop-cosmos.svg");
+              --f-w: min(31rem, 74vw);  --f-top: -13%;  --f-right: -1%;
+              --f-op: var(--cc-op); }
+/* Zurcher Weinland, 23 Jun 2026 - double spiral, which here reads as one thing */
+.f-helix    { --f-src: url("assets/crop-helix.svg");
+              --f-w: min(22rem, 60vw);  --f-top: 5%;    --f-right: -4%; }
+/* Roundway, 18 Jul 2026 - 13-point star & crescent, the year's lunations */
+.f-13moons  { --f-src: url("assets/crop-13moons.svg");
+              --f-w: min(23rem, 62vw);  --f-top: 8%;    --f-right: -5%; }
+/* Bishopstone, 4 Jul 2026 - triangles and circles, three bodies in aspect */
+.f-trine    { --f-src: url("assets/crop-trine.svg");
+              --f-w: min(17rem, 50vw);  --f-top: 30%;   --f-right: -4%; }
+/* Fox Hill, 21 Jul 2026 - a long pictogram of circles, rings and keys.
+   The only one laid along a line, so it runs as a wide strip, not a disc. */
+.f-cipher   { --f-src: url("assets/crop-cipher.svg");
+              --f-w: min(44rem, 100%);  --f-ar: 1240 / 260;
+              --f-bottom: -6%; --f-right: -2%;
+              --f-op: calc(var(--cc-op-sm) + 0.02); }
 
-@media (prefers-color-scheme: dark) {
-  .masthead::before { opacity: 0.13; }
+/* --- masthead ---------------------------------------------------------- */
+
+.masthead {
+  padding: clamp(3.5rem, 9vw, 6.5rem) 0 2.75rem;
+  margin-left: 0;
 }
-:root[data-theme="dark"] .masthead::before { opacity: 0.13; }
-:root[data-theme="light"] .masthead::before { opacity: 0.085; }
 
 @media (min-width: 56rem) {
   .masthead { padding-left: calc(var(--rail) + var(--gap)); }

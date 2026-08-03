@@ -45,18 +45,31 @@ those are separate repositories on separate paths.
   crawlers read.
 - **`llms.txt`** — mirrors the page in prose. Update it whenever a project is added or its
   description changes materially, otherwise the two drift.
-- **`assets/crop-field.svg`** — the formation behind the masthead. Applied as a CSS **mask**, so it
-  takes its colour from `--signal` and needs no light/dark variants.
+- **`assets/crop-*.svg`** — the formations behind the page. Applied as CSS **masks**, so each takes
+  its colour from `--signal` and one file serves both themes.
 
-## Background formation
+## Background formations
 
-Eight-fold geometry after the formation at **Zeals Knoll nr Mere, Wiltshire, 5 July 2026** —
-catalogued by [Temporary Temples][tt] as *"free standing bubbles in a flower-like design"*. Drawn
-from that description, not traced from a photograph. Regenerate with `dev/mkfield.py`.
+Five 2026 field reports, catalogued by [Temporary Temples][tt]. Each file is named for how the
+formation is commonly *read* — not for its shape, and not as a claim about meaning. The geometry is
+original, constructed from the catalogue's verbal description; none is traced from a photograph.
+Regenerate all five with `dev/mkfield.py`.
 
-If you swap it: the [season list][tt] flags commissioned formations explicitly — Hackpen Hill
-(26 June, *man-made for TV*), Journet (28 June, *man-made for exhibition*). Zeals Knoll carries no
-flag. Keep to an unflagged one.
+| File | Formation | Description |
+|---|---|---|
+| `crop-cosmos.svg` | Zeals Knoll nr Mere, 5 Jul | free standing bubbles in a flower-like design |
+| `crop-helix.svg` | Zürcher Weinland, CH, 23 Jun | double spiral design |
+| `crop-13moons.svg` | Roundway (2), 18 Jul | 13-point star & crescent moon |
+| `crop-trine.svg` | Bishopstone, 4 Jul | triangles and circles |
+| `crop-cipher.svg` | Fox Hill, 21 Jul | a long pictogram of circles, rings and keys |
+
+Placement is by CSS: a section opts in with `.field` plus a `.f-*` modifier supplying the source,
+size and corner. `crop-cipher.svg` is the only one laid along a line rather than round, so it
+carries `--f-ar` and runs as a wide strip.
+
+If you swap one: the [season list][tt] flags commissioned formations explicitly — Hackpen Hill
+(26 June, *man-made for TV*), Journet (28 June, *man-made for exhibition*). None of the five above
+carries a flag. Keep to an unflagged one.
 
 [tt]: https://temporarytemples.co.uk/project/crop-circles-2026-season-info
 
