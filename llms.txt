@@ -25,9 +25,14 @@ families, diffusion, flow matching, JEPA), modality-agnostically, targeting comp
 broadly — gene expression, perturbation response, and in-silico biological experimentation.
 
 The RNA line (agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at
-Envisagenics. The agentic AI work belongs to this line, not the method line: agentic-spliceai is
-built in three layers — base, meta, and agentic — and the agentic layer is what the project is
-finally about. The two lines are siblings rather than a pipeline.
+Envisagenics. The two lines are siblings rather than a pipeline.
+
+Alongside both runs agentic AI R&D, in agentic-ai-lab and openclaw-py. Agentic workflows suit
+scientific discovery in particular, because the ground keeps moving: assays are re-run,
+annotations revised, and results published between one release and the next, and a fixed pipeline
+has no way to go and look. That is why agentic-spliceai puts an agentic layer over its base and
+meta layers. Note that the agentic work is its own R&D track — it is not part of the generative
+and self-supervised method line.
 
 Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic modeling,
 sequence modeling of longitudinal clinical records, and reinforcement learning.
