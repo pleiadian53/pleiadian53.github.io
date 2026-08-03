@@ -26,8 +26,7 @@ computational biology broadly — gene expression, perturbation response, and in
 experimentation.
 
 The RNA line (agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at
-Envisagenics. The methods were not developed for the RNA problems: the two lines are siblings
-rather than a pipeline, and where a method does cross over it is borrowed, not inherited.
+Envisagenics. The two lines are siblings rather than a pipeline.
 
 Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic modeling,
 sequence modeling of longitudinal clinical records, and reinforcement learning.
