@@ -106,10 +106,18 @@ computational biology broadly rather than only at the RNA work above.
   for disease risk modeling and phenotyping, from work at the Icahn School of Medicine at Mount
   Sinai. https://github.com/pleiadian53/cf-ensemble
 
-### Also
+### Other Projects (incubating)
 
-pgm-lab (probabilistic graphical models for computational biology and physics), protein-ml-lab,
-and earlier repositories are on the GitHub profile.
+Early lines, not yet part of a thread above.
+
+- **pgm-lab** (open source) — probabilistic graphical models: a reusable library of PGM building
+  blocks plus research into novel methods, aimed at computational biology and physics.
+  https://github.com/pleiadian53/pgm-lab
+- **protein-ml-lab** (not public yet) — a depth study of the protein-ML stack: protein language
+  models (ESM), structure prediction in the AlphaFold lineage, and generative design (RFdiffusion,
+  ProteinMPNN, Chroma), with the cross-cutting frontier questions in biology foundation models.
+
+Earlier repositories are on the GitHub profile.
 
 ## Selected Publications
 
