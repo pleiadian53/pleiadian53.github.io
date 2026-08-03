@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pleiadian53.github.io/sitemap.xml

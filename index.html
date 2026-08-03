@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery</title>
+<meta name="author" content="Po-Hsiang (Barnett) Chiu">
+<meta name="description" content="Po-Hsiang (Barnett) Chiu — independent research scientist building end-to-end AI/ML systems for scientific discovery. RNA splicing and decay, generative and self-supervised modeling, agentic systems, and clinical sequence data.">
+<meta name="keywords" content="Po-Hsiang Chiu, Barnett Chiu, machine learning, computational biology, RNA splicing, isoform discovery, nonsense-mediated decay, self-supervised learning, JEPA, generative models, agentic AI, reinforcement learning, EHR">
+<link rel="canonical" href="https://pleiadian53.github.io/">
+<link rel="alternate" type="text/plain" href="https://pleiadian53.github.io/llms.txt" title="LLM-readable summary">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery">
+<meta property="og:description" content="Independent research scientist. RNA splicing and decay, generative and self-supervised modeling, agentic systems, clinical sequence data.">
+<meta property="og:url" content="https://pleiadian53.github.io/">
+<meta property="og:image" content="https://pleiadian53.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery">
+<meta property="og:site_name" content="Po-Hsiang (Barnett) Chiu">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery">
+<meta name="twitter:description" content="Independent research scientist. RNA splicing and decay, generative and self-supervised modeling, agentic systems, clinical sequence data.">
+<meta name="twitter:image" content="https://pleiadian53.github.io/assets/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231F5FA8'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' fill='%23fff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Independent research scientist &middot; New York</p>
+  <h1>Po-Hsiang <span class="alt">(Barnett)</span> Chiu</h1>
+  <p class="lede">I build end-to-end AI/ML systems for scientific discovery — models, data pipelines,
+    GPU infrastructure, and the application layer — as researcher, engineer, and product owner,
+    taking ambiguous scientific problems from first principles to implementation.</p>
+  <nav class="idlinks" aria-label="Profiles">
+    <a href="https://github.com/pleiadian53">GitHub</a>
+    <a href="https://scholar.google.com/citations?user=EE3r5rgAAAAJ">Google&nbsp;Scholar</a>
+    <a href="https://orcid.org/0000-0001-8816-9799">ORCID</a>
+    <a href="https://www.linkedin.com/in/barnettchiu53">LinkedIn</a>
+    <a href="mailto:barnettchiu@gmail.com">Email</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="band" aria-labelledby="about-h">
+  <div class="rail"><span class="railtag">About</span></div>
+  <div class="col">
+    <h2 id="about-h" class="sr-only">About</h2>
+    <p>Current work is in <strong>computational biology</strong>, on two fronts that feed each
+      other: developing generative and self-supervised methods — VAE families, diffusion, flow
+      matching, JEPA — and agentic AI, and applying them to gene regulation, RNA splicing and
+      decay, and perturbation modeling. Earlier work spans foundation-adaptor frameworks for
+      splice prediction, probabilistic modeling, and model interpretability.</p>
+    <p>The through-line is older than the biology. My dissertation recast actions as
+      <em>operators</em> on state space rather than discrete symbols; that idea now returns as the
+      action-operator line in self-supervised world models. In between, sequence modeling of
+      longitudinal clinical records. The projects below are one program, not a list, and the
+      schematic says how they connect.</p>
+    <p class="note">I publish as <strong>Po-Hsiang Chiu</strong> and go by <strong>Barnett
+      Chiu</strong>; both resolve to <a href="https://orcid.org/0000-0001-8816-9799">ORCID
+      0000-0001-8816-9799</a>.</p>
+  </div>
+</section>
+
+<section class="band bleed" aria-labelledby="map-h">
+  <div class="rail"><span class="railtag">Map</span></div>
+  <div class="col">
+    <h2 id="map-h">How the work connects</h2>
+    <figure class="schematic">
+      <div class="scroller">
+        <svg viewBox="0 0 940 344" role="img" aria-labelledby="svg-t svg-d">
+          <title id="svg-t">Lineage of research projects</title>
+          <desc id="svg-d">Method track: GRL supplies action operators to ssl-lab, which matures
+            methods for genai-lab, sibling to causal-bio-lab. Application track: agentic-ai-lab
+            contributed the Nexus agent to agentic-spliceai, which pairs with nmdiff through
+            AS-NMD coupling; openclaw-py descends from agentic-ai-lab. ssl-lab's sense and perturb
+            operators also feed agentic-spliceai. Clinical track: ehr-sequencing with
+            loinc-predictor, and cf-ensemble.</desc>
+
+          <g class="tracklab">
+            <text x="86" y="60" text-anchor="end">method</text>
+            <text x="86" y="180" text-anchor="end">application</text>
+            <text x="86" y="304" text-anchor="end">clinical</text>
+          </g>
+
+          <g class="edge">
+            <path d="M184 56 H294"/>
+            <path d="M404 56 H504"/>
+            <path d="M628 56 H718"/>
+            <path d="M260 176 H360"/>
+            <path d="M534 176 H654" class="bi"/>
+            <path d="M185 194 V214"/>
+            <path d="M265 300 H330"/>
+            <path d="M349 74 V118 H447 V158" class="dash"/>
+          </g>
+
+          <g class="edgelab">
+            <text x="239" y="30" text-anchor="middle">operators</text>
+            <text x="454" y="30" text-anchor="middle">methods</text>
+            <text x="673" y="30" text-anchor="middle">siblings</text>
+            <text x="310" y="150" text-anchor="middle">Nexus</text>
+            <text x="594" y="139" text-anchor="middle">AS&ndash;NMD</text>
+            <text x="594" y="151" text-anchor="middle">coupling</text>
+            <text x="401" y="133" text-anchor="middle">sense / perturb</text>
+          </g>
+
+          <g class="node">
+            <rect x="110" y="38" width="74" height="36" rx="3"/>
+            <text x="147" y="61">GRL</text>
+            <rect x="294" y="38" width="110" height="36" rx="3" class="hot"/>
+            <text x="349" y="61">ssl-lab</text>
+            <rect x="504" y="38" width="124" height="36" rx="3"/>
+            <text x="566" y="61">genai-lab</text>
+            <rect x="718" y="38" width="164" height="36" rx="3"/>
+            <text x="800" y="61">causal-bio-lab</text>
+
+            <rect x="110" y="158" width="150" height="36" rx="3"/>
+            <text x="185" y="181">agentic-ai-lab</text>
+            <rect x="360" y="158" width="174" height="36" rx="3" class="hot"/>
+            <text x="447" y="181">agentic-spliceai</text>
+            <rect x="654" y="158" width="104" height="36" rx="3" class="priv"/>
+            <text x="706" y="181">nmdiff</text>
+
+            <rect x="122" y="214" width="126" height="36" rx="3" class="priv"/>
+            <text x="185" y="237">openclaw-py</text>
+
+            <rect x="110" y="282" width="155" height="36" rx="3"/>
+            <text x="187" y="305">ehr-sequencing</text>
+            <rect x="330" y="282" width="155" height="36" rx="3"/>
+            <text x="407" y="305">loinc-predictor</text>
+            <rect x="551" y="282" width="139" height="36" rx="3"/>
+            <text x="620" y="305">cf-ensemble</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Solid edges are code lineage; the dashed edge is a method borrowed, not a fork.
+        <span class="key"><span class="sw priv-sw"></span>private</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="rna-h">
+  <div class="rail"><span class="railtag">01</span></div>
+  <div class="col">
+    <h2 id="rna-h">RNA therapeutics <span class="now">active</span></h2>
+    <p class="thesis">Two halves of one question, both begun during my time at Envisagenics and
+      continued since as independent lines. <strong>Where does splicing go, and what
+      survives?</strong></p>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/agentic-spliceai">agentic-spliceai</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/agentic-spliceai</code></p>
+      <p>A model-agnostic framework for adaptive splice-site prediction and novel isoform
+        discovery. It extends <em>any</em> per-nucleotide scorer with meta-learning adaptors,
+        multimodal context — conservation, chromatin, RNA-seq junctions, RBP binding — and an
+        agentic reasoning layer that drives LLM retrieval and validation across variant databases,
+        tissue and tumour RNA-seq, and the literature, to surface disease-induced splice sites and
+        actionable isoforms.</p>
+      <p>Builds on <a href="https://github.com/pleiadian53/meta-spliceai">meta-spliceai</a>, the
+        foundation-adaptor predecessor. Its research agent, Nexus, came from agentic-ai-lab.</p>
+      <p class="links"><a href="https://pleiadian53.github.io/agentic-spliceai/">Documentation</a>
+        <a href="https://doi.org/10.5281/zenodo.21696681">DOI</a></p>
+    </article>
+
+    <article class="proj is-private">
+      <h3>nmdiff <span class="tag">private</span></h3>
+      <p>Self-supervised quantification of <strong>nonsense-mediated decay efficiency</strong>, per
+        transcript. NMD is usually described as mRNA quality control; it is also
+        <em>quantity</em> control — cells route a fraction of a gene's transcripts into
+        PTC-bearing unproductive isoforms precisely so NMD will destroy them, tuning protein
+        output. That matters for antisense oligonucleotide design: a splice-switching drug only
+        helps if the rescued transcript survives decay.</p>
+      <p>The obstacle is that no labelled dataset for NMD efficiency exists at scale, and the
+        standard self-supervised toolkit is the wrong shape — no corruption you can apply to a
+        transcript has decay kinetics as its inverse. So rather than freezing the labelling
+        function and learning the encoder, nmdiff makes the <strong>labelling rule itself</strong>
+        a small, interpretable, biologically meaningful parameter vector and searches over it,
+        selecting the hypothesis whose labels are most predictable from a <strong>disjoint
+        view</strong> of the data: expression generates the labels, transcript structure predicts
+        them, and no feature crosses between the two. That disjointness is what makes it a
+        cross-view consistency test rather than circular reasoning.</p>
+    </article>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="gen-h">
+  <div class="rail"><span class="railtag">02</span></div>
+  <div class="col">
+    <h2 id="gen-h">Generative &amp; self-supervised modeling <span class="now">active</span></h2>
+    <p class="thesis">Novel generative and self-supervised methods, developed modality-agnostically
+      on fast proof-of-concept data and aimed at <strong>computational biology broadly</strong> —
+      gene expression, perturbation response, and in-silico experimentation — not only at the
+      splicing work above.</p>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/ssl-lab">ssl-lab</a> <span class="now">active</span></h3>
+      <p class="meta"><code>github.com/pleiadian53/ssl-lab</code></p>
+      <p>JEPA pushed past representation learning in two directions. <strong>Generative JEPA</strong>
+        adds a flow-matching prior over a frozen latent and a decoder back to data space, making
+        the representation sampleable — generation <em>given an intervention</em> rather than
+        unconditioned. <strong>Action operators</strong> promote JEPA's blind positional query to a
+        learned operator the model chooses and conditions on, turning a passive predictor into a
+        controllable world model that can roll futures forward and run counterfactuals.</p>
+      <p>Deliberately modality-agnostic: methods are de-risked here and returned to genai-lab.</p>
+      <p class="links"><a href="https://pleiadian53.github.io/ssl-lab/">Documentation</a></p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/genai-lab">genai-lab</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/genai-lab</code></p>
+      <p>Generative and predictive models — VAEs, diffusion, DiT, latent and flow matching, JEPA,
+        foundation-model adaptation — for in-silico biological experimentation. The flagship line
+        is Perturb-seq perturbation response, with uncertainty quantification and biological
+        validity treated as first-class objectives rather than afterthoughts.</p>
+      <p class="links"><a href="https://pleiadian53.github.io/genai-lab/">Documentation</a></p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/GRL">GRL</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/GRL</code> &middot; generalized reinforcement learning</p>
+      <p>Actions as <strong>operators</strong> on state space rather than discrete symbols — an
+        operator- and measurement-inspired formalism for decision-making, framing policy inference
+        in terms of operators, projections, and energy-based compatibility between states and
+        actions. Originated as one half of my doctoral dissertation at UT&nbsp;Arlington; rebooted
+        and extended since.</p>
+      <p>The other half of that dissertation was distributed computing for
+        <strong>US&nbsp;ATLAS</strong> at Brookhaven National Laboratory — a Condor-based pilot
+        factory for the PanDA workload management system. The operator formalism was never only a
+        thought experiment; its first application was scheduling at physics scale.</p>
+      <p class="links"><a href="https://pleiadian53.github.io/GRL/">Documentation</a>
+        <a href="https://arxiv.org/abs/2208.04822">arXiv:2208.04822</a></p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/causal-bio-lab">causal-bio-lab</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/causal-bio-lab</code></p>
+      <p>Causal inference, causal discovery, and causal representation learning for drug discovery,
+        target identification, and treatment-effect estimation. A sibling to genai-lab at an
+        earlier stage — one of the paradigms I am investing in ahead of mainstream use.</p>
+    </article>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="ag-h">
+  <div class="rail"><span class="railtag">03</span></div>
+  <div class="col">
+    <h2 id="ag-h">Agentic systems</h2>
+    <p class="thesis">Agents that leave a trace worth auditing, and that survive contact with a
+      real codebase.</p>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/agentic-ai-lab">agentic-ai-lab</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/agentic-ai-lab</code></p>
+      <p>Where <strong>Nexus</strong> was built — a multi-agent research system that plans,
+        researches, writes, and edits — before being refactored into agentic-spliceai as its
+        literature and evidence layer. The design patterns are the deliverable as much as the
+        system.</p>
+    </article>
+
+    <article class="proj is-private">
+      <h3>openclaw-py <span class="tag">private</span></h3>
+      <p>A typed Python SDK for an agent operating system, and the use cases that earned it. An
+        agent OS is excellent from a chat window, but a chat window is where work disappears: every
+        clever automation lives as a message you will never find again, and nothing is reusable,
+        testable, or version controlled. This turns that surface into code.</p>
+      <p>The applications are the interesting part — a scheduled research digest; per-topic agent
+        personas and routing; pre-flight checks that tell you what a model migration would actually
+        touch; and <strong>semantic memory measured rather than trusted</strong>, with retrieval
+        scored against a labelled query set and an extractor–verifier pair that fills memory
+        instead of only searching it.</p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/llm-lab">llm-lab</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/llm-lab</code></p>
+      <p>Reusable building blocks for LLM pre-training and post-training — supervised fine-tuning,
+        DPO, RLHF, and alignment — aimed at LLM-based solutions in computational biology.</p>
+    </article>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="clin-h">
+  <div class="rail"><span class="railtag">04</span></div>
+  <div class="col">
+    <h2 id="clin-h">Clinical &amp; health data</h2>
+    <p class="thesis">Sequence modeling of patient records, from the Columbia and Mount&nbsp;Sinai
+      years — where treating a medical history as a document first made sense to me.</p>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/ehr-sequencing">ehr-sequencing</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/ehr-sequencing</code></p>
+      <p>Electronic health records as a language: medical codes as tokens, patient histories as
+        sequences. LM-style encoders — BEHRT, transformers, recurrent baselines — applied to
+        disease progression, survival modeling, and temporal phenotyping. Rooted in my
+        postdoctoral work at the Department of Biomedical Informatics, Columbia University.</p>
+      <p class="links"><a href="https://pleiadian53.github.io/ehr-sequencing/">Documentation</a></p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/loinc-predictor">loinc-predictor</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/loinc-predictor</code></p>
+      <p>A three-stage retrieval-and-ranking pipeline for LOINC code prediction and reliability
+        assessment — the interoperability problem that has to be solved before any of the sequence
+        modeling above is trustworthy. An independently reproduced prototype of clinical-analytics
+        work at Prognos Health.</p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/cf-ensemble">cf-ensemble</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/cf-ensemble</code></p>
+      <p>Ensemble learning through latent-factor collaborative filtering: treat classifiers and
+        instances as the two sides of a recommendation problem, and let matrix factorisation
+        reweight unreliable predictions. Built for disease risk modeling and phenotyping during my
+        time at the Icahn School of Medicine at Mount&nbsp;Sinai.</p>
+      <p class="links"><a href="https://pleiadian53.github.io/cf-ensemble/">Documentation</a></p>
+    </article>
+
+    <p class="note">Probabilistic graphical models
+      (<a href="https://github.com/pleiadian53/pgm-lab">pgm-lab</a>, aimed at computational biology
+      <em>and</em> physics), protein ML, and earlier work live on the
+      <a href="https://github.com/pleiadian53">GitHub profile</a>.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="pub-h">
+  <div class="rail"><span class="railtag">Writing</span></div>
+  <div class="col">
+    <h2 id="pub-h">Selected writing</h2>
+    <ul class="pubs">
+      <li>
+        <p class="pt"><a href="https://doi.org/10.5281/zenodo.21696681">Agentic-SpliceAI: an
+          open-source framework for adaptive splice-site prediction and novel isoform
+          discovery</a></p>
+        <p class="pv">Zenodo, 2026 &middot; software</p>
+      </li>
+      <li>
+        <p class="pt"><a href="https://arxiv.org/abs/2208.04822">Generalized reinforcement
+          learning: experience particles, action operator, reinforcement field, memory
+          association, and decision concepts</a></p>
+        <p class="pv">arXiv:2208.04822, 2022</p>
+      </li>
+      <li>
+        <p class="pt"><a href="https://doi.org/10.1016/j.jbi.2017.04.009">EHR-based phenotyping:
+          bulk learning and evaluation</a></p>
+        <p class="pv">Journal of Biomedical Informatics, 2017</p>
+      </li>
+      <li>
+        <p class="pt">Generalized reinforcement learning with an application in generic workload
+          management systems</p>
+        <p class="pv">Doctoral dissertation, University of Texas at Arlington</p>
+      </li>
+    </ul>
+    <p class="note">Full list on
+      <a href="https://scholar.google.com/citations?user=EE3r5rgAAAAJ">Google Scholar</a>.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="contact-h">
+  <div class="rail"><span class="railtag">Contact</span></div>
+  <div class="col">
+    <h2 id="contact-h">Get in touch</h2>
+    <p>Happy to talk about splicing, decay, world models, or anything above.
+      <a href="mailto:barnettchiu@gmail.com">barnettchiu@gmail.com</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Po-Hsiang (Barnett) Chiu &middot; ORCID
+    <a href="https://orcid.org/0000-0001-8816-9799">0000-0001-8816-9799</a></p>
+  <p class="fine">Hand-written HTML and CSS. Source on
+    <a href="https://github.com/pleiadian53/pleiadian53.github.io">GitHub</a>.</p>
+</footer>
+
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://pleiadian53.github.io/#person",
+    "name": "Po-Hsiang Chiu",
+    "alternateName": ["Barnett Chiu", "Po-Hsiang (Barnett) Chiu", "Chiu, Po-Hsiang"],
+    "givenName": "Po-Hsiang",
+    "familyName": "Chiu",
+    "jobTitle": "Independent Research Scientist",
+    "description": "Independent research scientist building end-to-end AI/ML systems for scientific discovery: RNA splicing and decay, generative and self-supervised modeling, agentic systems, and clinical sequence data.",
+    "url": "https://pleiadian53.github.io/",
+    "image": "https://pleiadian53.github.io/assets/og-image.png",
+    "email": "mailto:barnettchiu@gmail.com",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "https://orcid.org/0000-0001-8816-9799"
+    },
+    "sameAs": [
+      "https://orcid.org/0000-0001-8816-9799",
+      "https://scholar.google.com/citations?user=EE3r5rgAAAAJ",
+      "https://github.com/pleiadian53",
+      "https://www.linkedin.com/in/barnettchiu53",
+      "https://doi.org/10.5281/zenodo.21696681"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Texas at Arlington"
+    },
+    "knowsAbout": [
+      "Machine Learning",
+      "Computational Biology",
+      "RNA Splicing",
+      "Isoform Discovery",
+      "Nonsense-Mediated Decay",
+      "Self-Supervised Learning",
+      "Joint-Embedding Predictive Architectures",
+      "Generative Models",
+      "Flow Matching",
+      "Diffusion Models",
+      "Agentic AI",
+      "Multi-Agent Systems",
+      "Reinforcement Learning",
+      "Causal Inference",
+      "Electronic Health Records",
+      "Genomics"
+    ]
+  }
+}
+</script>
+
+</body>
+</html>

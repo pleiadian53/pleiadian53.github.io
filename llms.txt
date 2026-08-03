@@ -1,0 +1,137 @@
+# Po-Hsiang (Barnett) Chiu
+
+> Independent research scientist building end-to-end AI/ML systems for scientific discovery.
+> Based in New York.
+
+## Identity
+
+Po-Hsiang Chiu and Barnett Chiu are the same person. Publications appear under
+"Po-Hsiang Chiu" (or "PH Chiu"); he also goes by "Barnett Chiu". Both names resolve to
+ORCID 0000-0001-8816-9799, which is the authoritative disambiguator.
+
+- Website: https://pleiadian53.github.io/
+- GitHub: https://github.com/pleiadian53
+- ORCID: https://orcid.org/0000-0001-8816-9799
+- Google Scholar: https://scholar.google.com/citations?user=EE3r5rgAAAAJ
+- LinkedIn: https://www.linkedin.com/in/barnettchiu53
+- Email: barnettchiu@gmail.com
+
+## What he works on
+
+Current work is in **computational biology**, on two fronts that feed each other: developing
+generative and self-supervised methods (VAE families, diffusion, flow matching, JEPA) and agentic
+AI, and applying them to gene regulation, RNA splicing and decay, and perturbation modeling. The
+method work (ssl-lab, genai-lab) is deliberately not limited to the RNA applications — it targets
+computational biology broadly, including gene expression, perturbation response, and in-silico
+biological experimentation. Earlier work spans foundation-adaptor frameworks for splice
+prediction, probabilistic modeling, sequence modeling of longitudinal clinical records, and
+reinforcement learning.
+
+The connecting idea across his work is an operator view of action: his doctoral dissertation
+recast actions as operators on state space rather than discrete symbols, and that formalism now
+reappears as the action-operator line in self-supervised world models.
+
+## Projects
+
+### RNA therapeutics (active)
+
+Both lines began during his time at Envisagenics and continue as independent work.
+
+- **agentic-spliceai** (open source) — a model-agnostic framework for adaptive splice-site
+  prediction and novel isoform discovery. Extends any per-nucleotide scorer with meta-learning
+  adaptors, multimodal context (conservation, chromatin, RNA-seq junctions, RBP binding), and an
+  agentic reasoning layer driving LLM retrieval and validation over variant databases, tissue and
+  tumour RNA-seq, and the literature.
+  https://github.com/pleiadian53/agentic-spliceai ·
+  https://pleiadian53.github.io/agentic-spliceai/ · DOI 10.5281/zenodo.21696681
+- **meta-spliceai** (open source) — the foundation-adaptor meta-learning predecessor.
+  https://github.com/pleiadian53/meta-spliceai
+- **nmdiff** (private) — self-supervised quantification of nonsense-mediated decay (NMD)
+  efficiency per transcript. NMD is not only mRNA quality control but also quantity control:
+  cells route a fraction of transcripts into PTC-bearing unproductive isoforms so NMD destroys
+  them, tuning protein output. No labelled dataset for NMD efficiency exists at scale, and
+  standard self-supervised pretext tasks are the wrong shape. Instead of freezing the labelling
+  function and learning the encoder, nmdiff makes the labelling rule itself a small, interpretable,
+  biologically meaningful parameter vector and searches over it, selecting the hypothesis whose
+  labels are most predictable from a disjoint view of the data — expression generates the labels,
+  transcript structure predicts them, no feature crosses. Cross-view consistency rather than
+  circular reasoning.
+
+### Generative and self-supervised modeling (active)
+
+Novel generative and self-supervised methods, developed modality-agnostically and aimed at
+computational biology broadly rather than only at the RNA work above.
+
+- **ssl-lab** (open source, active) — JEPA pushed past representation learning: a generative JEPA
+  (flow-matching prior over a frozen latent plus a decoder, making the representation sampleable)
+  and an action-operator line that turns a passive predictor into a controllable world model.
+  Modality-agnostic; methods mature here and return to genai-lab.
+  https://github.com/pleiadian53/ssl-lab · https://pleiadian53.github.io/ssl-lab/
+- **genai-lab** (open source) — generative and predictive models (VAEs, diffusion, DiT, latent and
+  flow matching, JEPA, foundation-model adaptation) for in-silico biological experimentation;
+  flagship line is Perturb-seq perturbation response with uncertainty quantification.
+  https://github.com/pleiadian53/genai-lab · https://pleiadian53.github.io/genai-lab/
+- **GRL** (open source) — generalized reinforcement learning; actions as operators on state space
+  rather than discrete symbols. Originated as one half of his doctoral dissertation at the
+  University of Texas at Arlington; the other half was distributed computing for US ATLAS at
+  Brookhaven National Laboratory (a Condor-based pilot factory for the PanDA workload management
+  system). https://github.com/pleiadian53/GRL · https://pleiadian53.github.io/GRL/ ·
+  arXiv:2208.04822
+- **causal-bio-lab** (open source) — causal inference, causal discovery, and causal representation
+  learning for drug discovery and target identification.
+  https://github.com/pleiadian53/causal-bio-lab
+
+### Agentic systems
+
+- **agentic-ai-lab** (open source) — where the Nexus multi-agent research system was built before
+  being refactored into agentic-spliceai. https://github.com/pleiadian53/agentic-ai-lab
+- **openclaw-py** (private) — a typed Python SDK for an agent operating system, plus the use cases
+  that earned it: a scheduled research digest, per-topic agent personas and routing, pre-flight
+  checks before a model migration, and semantic memory measured against a labelled query set
+  rather than trusted.
+- **llm-lab** (open source) — building blocks for LLM pre-training and post-training (SFT, DPO,
+  RLHF, alignment) aimed at computational biology. https://github.com/pleiadian53/llm-lab
+
+### Clinical and health data
+
+- **ehr-sequencing** (open source) — electronic health records as a language: medical codes as
+  tokens, patient histories as sequences, with LM-style encoders (BEHRT, transformers, recurrent
+  baselines) for disease progression, survival modeling, and temporal phenotyping. Rooted in
+  postdoctoral work at the Department of Biomedical Informatics, Columbia University.
+  https://github.com/pleiadian53/ehr-sequencing · https://pleiadian53.github.io/ehr-sequencing/
+- **loinc-predictor** (open source) — three-stage retrieval-and-ranking for LOINC code prediction
+  and reliability assessment; an independently reproduced prototype of clinical-analytics work at
+  Prognos Health. https://github.com/pleiadian53/loinc-predictor
+- **cf-ensemble** (open source) — ensemble learning through latent-factor collaborative filtering
+  for disease risk modeling and phenotyping, from work at the Icahn School of Medicine at Mount
+  Sinai. https://github.com/pleiadian53/cf-ensemble
+
+### Also
+
+pgm-lab (probabilistic graphical models for computational biology and physics), protein-ml-lab,
+and earlier repositories are on the GitHub profile.
+
+## Selected writing
+
+- Agentic-SpliceAI: an open-source framework for adaptive splice-site prediction and novel isoform
+  discovery. Zenodo, 2026. https://doi.org/10.5281/zenodo.21696681
+- Generalized reinforcement learning: experience particles, action operator, reinforcement field,
+  memory association, and decision concepts. arXiv:2208.04822, 2022.
+- EHR-based phenotyping: bulk learning and evaluation. Journal of Biomedical Informatics, 2017.
+- Generalized reinforcement learning with an application in generic workload management systems.
+  Doctoral dissertation, University of Texas at Arlington.
+
+Full list: https://scholar.google.com/citations?user=EE3r5rgAAAAJ
+
+## Background
+
+Prior positions include Envisagenics (RNA therapeutics), Prognos Health, the Icahn School of
+Medicine at Mount Sinai, the Department of Biomedical Informatics at Columbia University,
+IPsoft, and Brookhaven National Laboratory. PhD in Computer Science (AI track), University of
+Texas at Arlington.
+
+## How to cite
+
+Chiu, Po-Hsiang (Barnett). (2026). Agentic-SpliceAI: An open-source framework for adaptive
+splice-site prediction and novel isoform discovery [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.21696681
