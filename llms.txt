@@ -21,12 +21,13 @@ which is the authoritative disambiguator.
 Current work is in **computational biology**, along two lines that grew up independently.
 
 The method line (ssl-lab, genai-lab) develops generative and self-supervised methods (VAE
-families, diffusion, flow matching, JEPA) and agentic AI, modality-agnostically, targeting
-computational biology broadly — gene expression, perturbation response, and in-silico biological
-experimentation.
+families, diffusion, flow matching, JEPA), modality-agnostically, targeting computational biology
+broadly — gene expression, perturbation response, and in-silico biological experimentation.
 
 The RNA line (agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at
-Envisagenics. The two lines are siblings rather than a pipeline.
+Envisagenics. The agentic AI work belongs to this line, not the method line: agentic-spliceai is
+built in three layers — base, meta, and agentic — and the agentic layer is what the project is
+finally about. The two lines are siblings rather than a pipeline.
 
 Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic modeling,
 sequence modeling of longitudinal clinical records, and reinforcement learning.
@@ -42,10 +43,14 @@ that formalism now reappears as the action-operator line in self-supervised worl
 Both lines began during his time at Envisagenics and continue as independent work.
 
 - **agentic-spliceai** (open source) — a model-agnostic framework for adaptive splice-site
-  prediction and novel isoform discovery. Extends any per-nucleotide scorer with meta-learning
-  adaptors, multimodal context (conservation, chromatin, RNA-seq junctions, RBP binding), and an
-  agentic reasoning layer driving LLM retrieval and validation over variant databases, tissue and
-  tumor RNA-seq, and the literature.
+  prediction and novel isoform discovery, built in three layers: a base layer of per-nucleotide
+  scores from any foundation model, a meta layer adapting them with multimodal context
+  (conservation, chromatin, RNA-seq junctions, RBP binding), and an agentic layer over both. The
+  agentic layer is the point: splicing is context-dependent and its evidence is incomplete and
+  still arriving — ENCODE eCLIP covers on the order of 150 RBPs against the roughly 1,500 encoded
+  in the human genome — so any fixed feature table is a snapshot of what happened to be assayed.
+  The agent reaches across variant databases, tissue and tumor RNA-seq, and the literature not
+  only to check a predicted site but to find the evidence that would support one.
   https://github.com/pleiadian53/agentic-spliceai ·
   https://pleiadian53.github.io/agentic-spliceai/ · DOI 10.5281/zenodo.21696681
 - **meta-spliceai** (open source) — the foundation-adaptor meta-learning predecessor.
