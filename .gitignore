@@ -1,0 +1,25 @@
+# This repository is PUBLIC and is served at https://pleiadian53.github.io/.
+# Anything committed here is published. Follow the project convention:
+#
+#   docs/     public, shareable documentation
+#   scripts/  public maintenance tooling (mkfield.py, check_sync.py)
+#   dev/      PRIVATE development notes -- ignored below, never committed
+#
+# Development directory (NOT for public)
+dev/
+dev/**/*
+
+# macOS
+.DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python (scripts/ tooling)
+__pycache__/
+*.py[cod]
+.venv/
+venv/

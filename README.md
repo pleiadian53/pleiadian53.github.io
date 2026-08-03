@@ -14,9 +14,15 @@ index.html          the whole page (content + inline SVG schematic + JSON-LD)
 styles.css          palette tokens, light/dark, responsive
 assets/og-image.png 1200x630 social card
 llms.txt            plain-text summary for LLM crawlers
-sitemap.xml         one URL
+sitemap.xml         the page plus the six live project doc sites
 robots.txt          allow all
+scripts/            maintenance tooling (public)
+dev/                private notes -- gitignored, never committed
 ```
+
+**This repository is public and anything committed is published.** Public, shareable material
+goes in the tree above; `scripts/` holds tooling meant to be read. Private working notes go in
+`dev/`, which `.gitignore` excludes — mirroring the convention in the other projects.
 
 ## Preview locally
 
@@ -52,6 +58,13 @@ those are separate repositories on separate paths.
   the `<desc>` in sync — it is what screen readers and crawlers read.
 - **`llms.txt`** — mirrors the page in prose. Update it whenever a project is added or its
   description changes materially, otherwise the two drift.
+- **Staying in sync with the profile README** — the same facts are hand-written in three places
+  (`index.html`, `llms.txt`, and `pleiadian53/pleiadian53`'s README, which renders at
+  github.com/pleiadian53). They are separate on purpose: each renders for a different medium, and
+  GitHub sanitises profile READMEs, so no single source can produce all three. Only the project
+  roster, identity strings, and spelling overlap — publications, JSON-LD, the schematic and the
+  sitemap are site-only. Run `python3 scripts/check_sync.py` before pushing; it reports drift and
+  exits non-zero, so it also works as a hook.
 - **`assets/crop-*.svg`** — the crop circles in the background. See below.
 
 ## Crop circles
@@ -72,7 +85,8 @@ lunations, triangles in a round as a trine, a line of glyphs and keys as a ciphe
 claim is made about meaning.
 
 The geometry is **original**, constructed from the catalogue's verbal description of each
-formation. Nothing is traced from a photograph. Regenerate all five with `dev/mkfield.py`.
+formation. Nothing is traced from a photograph. Regenerate all five with `scripts/mkfield.py`
+(deterministic — a clean tree stays clean).
 
 **Choosing a formation.** The [season list][tt] annotates commissioned formations explicitly —
 Hackpen Hill (26 Jun, *man-made for TV*), Journet, France (28 Jun, *man-made for exhibition*).
