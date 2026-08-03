@@ -30,7 +30,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -81,7 +81,7 @@
   <div class="col">
     <h2 id="map-h">How the Work Connects</h2>
     <figure class="schematic">
-      <div class="scroller">
+      <div class="scroller" tabindex="0" role="group" aria-label="Project lineage diagram, scrollable">
         <svg viewBox="0 0 940 344" role="img" aria-labelledby="svg-t svg-d">
           <title id="svg-t">Lineage of research projects</title>
           <desc id="svg-d">Method track: GRL supplies action operators to ssl-lab, which matures
@@ -91,6 +91,24 @@
             operators also feed agentic-spliceai. Clinical track: ehr-sequencing with
             loinc-predictor, and cf-ensemble.</desc>
 
+          <defs>
+            <marker id="ah" class="mk" viewBox="0 0 8 8" refX="7.5" refY="4"
+                    markerWidth="5" markerHeight="5" markerUnits="strokeWidth"
+                    orient="auto-start-reverse">
+              <path d="M0.5 0.75 L7.5 4 L0.5 7.25 z"/>
+            </marker>
+            <marker id="ah-dash" class="mk mk-dash" viewBox="0 0 8 8" refX="7.5" refY="4"
+                    markerWidth="5" markerHeight="5" markerUnits="strokeWidth"
+                    orient="auto-start-reverse">
+              <path d="M0.5 0.75 L7.5 4 L0.5 7.25 z"/>
+            </marker>
+            <marker id="ah-bi" class="mk mk-bi" viewBox="0 0 8 8" refX="7.5" refY="4"
+                    markerWidth="5" markerHeight="5" markerUnits="strokeWidth"
+                    orient="auto-start-reverse">
+              <path d="M0.5 0.75 L7.5 4 L0.5 7.25 z"/>
+            </marker>
+          </defs>
+
           <g class="tracklab">
             <text x="86" y="60" text-anchor="end">method</text>
             <text x="86" y="180" text-anchor="end">application</text>
@@ -98,14 +116,15 @@
           </g>
 
           <g class="edge">
-            <path d="M184 56 H294"/>
-            <path d="M404 56 H504"/>
+            <path d="M184 56 H294" marker-end="url(#ah)"/>
+            <path d="M404 56 H504" marker-end="url(#ah)"/>
             <path d="M628 56 H718"/>
-            <path d="M260 176 H360"/>
-            <path d="M534 176 H654" class="bi"/>
-            <path d="M185 194 V214"/>
+            <path d="M260 176 H360" marker-end="url(#ah)"/>
+            <path d="M534 176 H654" class="bi"
+                  marker-start="url(#ah-bi)" marker-end="url(#ah-bi)"/>
+            <path d="M185 194 V214" marker-end="url(#ah)"/>
             <path d="M265 300 H330"/>
-            <path d="M349 74 V118 H447 V158" class="dash"/>
+            <path d="M349 74 V118 H447 V158" class="dash" marker-end="url(#ah-dash)"/>
           </g>
 
           <g class="edgelab">
@@ -147,7 +166,9 @@
           </g>
         </svg>
       </div>
-      <figcaption>Solid edges are code lineage; the dashed edge is a method borrowed, not a fork.
+      <figcaption>Arrows read as flow. Grey edges are code lineage, the dashed edge is a method
+        borrowed rather than forked, and the copper edge is a biological coupling, not a
+        dependency. Unarrowed edges are associations.
         <span class="key"><span class="sw priv-sw"></span>private</span></figcaption>
     </figure>
   </div>
@@ -435,12 +456,20 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
+  "@graph": [
+  {
+    "@type": "ProfilePage",
+    "@id": "https://pleiadian53.github.io/#page",
+    "url": "https://pleiadian53.github.io/",
+    "name": "Barnett Chiu — AI/ML systems for scientific discovery",
+    "inLanguage": "en",
+    "mainEntity": { "@id": "https://pleiadian53.github.io/#person" }
+  },
+  {
     "@type": "Person",
     "@id": "https://pleiadian53.github.io/#person",
     "name": "Po-Hsiang Chiu",
-    "alternateName": ["Barnett Chiu", "Po-Hsiang (Barnett) Chiu", "Chiu, Po-Hsiang"],
+    "alternateName": ["Barnett Chiu", "Po-Hsiang (Barnett) Chiu", "Chiu, Po-Hsiang", "P.-H. Chiu"],
     "givenName": "Po-Hsiang",
     "familyName": "Chiu",
     "jobTitle": "Independent Research Scientist",
@@ -468,21 +497,130 @@
       "Machine Learning",
       "Computational Biology",
       "RNA Splicing",
+      "Alternative Splicing",
       "Isoform Discovery",
       "Nonsense-Mediated Decay",
+      "Splice Site Prediction",
       "Self-Supervised Learning",
       "Joint-Embedding Predictive Architectures",
       "Generative Models",
       "Flow Matching",
       "Diffusion Models",
+      "Perturbation Modeling",
       "Agentic AI",
       "Multi-Agent Systems",
       "Reinforcement Learning",
       "Causal Inference",
       "Electronic Health Records",
       "Genomics"
+    ],
+    "subjectOf": [
+      { "@id": "https://doi.org/10.5281/zenodo.21696681" },
+      { "@id": "https://doi.org/10.1093/jamia/ocac208" },
+      { "@id": "https://arxiv.org/abs/2208.04822" },
+      { "@id": "https://doi.org/10.1172/JCI152088" },
+      { "@id": "https://doi.org/10.1038/s41598-021-90406-0" },
+      { "@id": "https://doi.org/10.1016/j.jbi.2017.04.009" },
+      { "@id": "https://doi.org/10.1088/1742-6596/219/6/062041" }
+    ]
+  },
+  {
+    "@type": "SoftwareSourceCode",
+    "@id": "https://doi.org/10.5281/zenodo.21696681",
+    "name": "Agentic-SpliceAI",
+    "alternateName": "agentic-spliceai",
+    "headline": "Agentic-SpliceAI: an open-source framework for adaptive splice-site prediction and novel isoform discovery",
+    "description": "A model-agnostic framework for adaptive splice-site prediction and novel isoform discovery. Extends any per-nucleotide scorer with meta-learning adaptors, multimodal context (conservation, chromatin, RNA-seq junctions, RBP binding), and an agentic reasoning layer for LLM-driven retrieval and validation.",
+    "codeRepository": "https://github.com/pleiadian53/agentic-spliceai",
+    "programmingLanguage": "Python",
+    "license": "https://opensource.org/licenses/MIT",
+    "datePublished": "2026",
+    "author": { "@id": "https://pleiadian53.github.io/#person" },
+    "url": "https://pleiadian53.github.io/agentic-spliceai/",
+    "sameAs": [
+      "https://github.com/pleiadian53/agentic-spliceai",
+      "https://doi.org/10.5281/zenodo.21696681"
+    ]
+  },
+  {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1093/jamia/ocac208",
+    "headline": "Clinical and temporal characterization of COVID-19 subgroups using patient vector embeddings of electronic health records",
+    "datePublished": "2023",
+    "isPartOf": { "@type": "Periodical", "name": "Journal of the American Medical Informatics Association" },
+    "author": [
+      { "@type": "Person", "name": "Casey N. Ta" },
+      { "@type": "Person", "name": "Jason E. Zucker" },
+      { "@id": "https://pleiadian53.github.io/#person" },
+      { "@type": "Person", "name": "Yilu Fang" },
+      { "@type": "Person", "name": "Karthik Natarajan" },
+      { "@type": "Person", "name": "Chunhua Weng" }
+    ]
+  },
+  {
+    "@type": "ScholarlyArticle",
+    "@id": "https://arxiv.org/abs/2208.04822",
+    "headline": "Generalized reinforcement learning: experience particles, action operator, reinforcement field, memory association, and decision concepts",
+    "datePublished": "2022",
+    "author": [
+      { "@id": "https://pleiadian53.github.io/#person" },
+      { "@type": "Person", "name": "Manfred Huber" }
+    ]
+  },
+  {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1172/JCI152088",
+    "headline": "Machine learning-driven identification of early-life air toxic combinations associated with childhood asthma outcomes",
+    "datePublished": "2021",
+    "isPartOf": { "@type": "Periodical", "name": "Journal of Clinical Investigation" },
+    "author": [
+      { "@type": "Person", "name": "Yan-Chak Li" },
+      { "@type": "Person", "name": "Hsiao-Hsien Leon Hsu" },
+      { "@type": "Person", "name": "Yoojin Chun" },
+      { "@id": "https://pleiadian53.github.io/#person" },
+      { "@type": "Person", "name": "Zoe Arditi" },
+      { "@type": "Person", "name": "Luz Claudio" },
+      { "@type": "Person", "name": "Gaurav Pandey" },
+      { "@type": "Person", "name": "Supinda Bunyavanich" }
+    ]
+  },
+  {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1038/s41598-021-90406-0",
+    "headline": "Predicting youth diabetes risk using NHANES data and machine learning",
+    "datePublished": "2021",
+    "isPartOf": { "@type": "Periodical", "name": "Scientific Reports" },
+    "author": [
+      { "@type": "Person", "name": "Nita Vangeepuram" },
+      { "@type": "Person", "name": "Bian Liu" },
+      { "@id": "https://pleiadian53.github.io/#person" },
+      { "@type": "Person", "name": "Linhua Wang" },
+      { "@type": "Person", "name": "Gaurav Pandey" }
+    ]
+  },
+  {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1016/j.jbi.2017.04.009",
+    "headline": "EHR-based phenotyping: bulk learning and evaluation",
+    "datePublished": "2017",
+    "isPartOf": { "@type": "Periodical", "name": "Journal of Biomedical Informatics" },
+    "author": [
+      { "@id": "https://pleiadian53.github.io/#person" },
+      { "@type": "Person", "name": "George Hripcsak" }
+    ]
+  },
+  {
+    "@type": "ScholarlyArticle",
+    "@id": "https://doi.org/10.1088/1742-6596/219/6/062041",
+    "headline": "Pilot factory - a Condor-based system for scalable Pilot Job generation in the PanDA WMS framework",
+    "datePublished": "2010",
+    "isPartOf": { "@type": "Periodical", "name": "Journal of Physics: Conference Series" },
+    "author": [
+      { "@id": "https://pleiadian53.github.io/#person" },
+      { "@type": "Person", "name": "Maxim Potekhin" }
     ]
   }
+  ]
 }
 </script>
 

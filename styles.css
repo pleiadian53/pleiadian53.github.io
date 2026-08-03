@@ -46,36 +46,6 @@
   }
 }
 
-:root[data-theme="dark"] {
-  --cc-op: 0.26;
-  --cc-op-sm: 0.20;
-  --paper:      #0d1219;
-  --plate:      #141c26;
-  --ink:        #e3e9f0;
-  --ink-2:      #98a5b3;
-  --ink-3:      #75828f;
-  --hair:       #232d3a;
-  --hair-soft:  #1b242e;
-  --signal:     #6fa8e8;
-  --signal-dim: #3c5f88;
-  --copper:     #d08b5f;
-}
-
-:root[data-theme="light"] {
-  --cc-op: 0.20;
-  --cc-op-sm: 0.15;
-  --paper:      #f7f8fa;
-  --plate:      #eef1f5;
-  --ink:        #131a24;
-  --ink-2:      #56626f;
-  --ink-3:      #7d8894;
-  --hair:       #dbe1e8;
-  --hair-soft:  #e6eaf0;
-  --signal:     #1f5fa8;
-  --signal-dim: #7ba0cc;
-  --copper:     #9a5730;
-}
-
 *, *::before, *::after { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -380,12 +350,17 @@ a:focus-visible {
 
 .schematic { margin: 0; }
 
+/* Focusable so the diagram can be scrolled from the keyboard (WCAG 2.1.1). */
 .scroller {
   overflow-x: auto;
   padding-bottom: 0.5rem;
   background: var(--plate);
   border: 1px solid var(--hair);
   border-radius: 2px;
+}
+.scroller:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
 }
 
 .schematic svg {
@@ -422,6 +397,12 @@ a:focus-visible {
 }
 .schematic .edge path.dash { stroke-dasharray: 4 4; stroke: var(--signal-dim); }
 .schematic .edge path.bi { stroke: var(--copper); }
+
+/* Arrowheads. Filled from theme tokens rather than context-stroke, so the
+   colour tracks light/dark without relying on SVG 2 paint servers. */
+.schematic .mk path { fill: var(--ink-3); stroke: none; }
+.schematic .mk-dash path { fill: var(--signal-dim); }
+.schematic .mk-bi path { fill: var(--copper); }
 
 .schematic .edgelab text {
   fill: var(--ink-3);

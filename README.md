@@ -39,15 +39,17 @@ those are separate repositories on separate paths.
 
 ## Editing
 
-- **Palette** — every colour is a custom property at the top of `styles.css`, defined three times:
-  `:root`, `@media (prefers-color-scheme: dark)`, and the two `:root[data-theme=…]` blocks.
-  Change a value in all the places it appears; never style a component inside the media query.
+- **Palette** — every colour is a custom property at the top of `styles.css`, defined twice:
+  `:root` and `@media (prefers-color-scheme: dark)`. Change a value in both; never style a
+  component inside the media query. The page follows the system theme and has no toggle of its
+  own — adding one means reintroducing `:root[data-theme=…]` overrides alongside a script.
 - **Adding a project** — copy an `<article class="proj">` block. Private, unlinked projects use
   `class="proj is-private"` with a `<span class="tag">private</span>` and no `<a>` on the heading.
 - **The schematic** — plain SVG in `index.html`, laid out on a 940×344 grid. Nodes are
   `<rect>` + `<text>` pairs; `.hot` outlines a focus project in the accent blue, `.priv` marks a
-  private one in dashed copper. Keep the `<desc>` in sync — it is what screen readers and
-  crawlers read.
+  private one in dashed copper. Directed edges carry `marker-end="url(#ah)"` (`#ah-dash` and
+  `#ah-bi` match the dashed and copper strokes); edges left unarrowed read as associations. Keep
+  the `<desc>` in sync — it is what screen readers and crawlers read.
 - **`llms.txt`** — mirrors the page in prose. Update it whenever a project is added or its
   description changes materially, otherwise the two drift.
 - **`assets/crop-*.svg`** — the crop circles in the background. See below.

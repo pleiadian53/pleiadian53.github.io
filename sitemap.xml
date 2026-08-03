@@ -6,4 +6,36 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Project documentation sites. Separate repositories, same origin; listed
+       here so crawlers discover them and cluster them with the profile above. -->
+  <url>
+    <loc>https://pleiadian53.github.io/agentic-spliceai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pleiadian53.github.io/ssl-lab/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pleiadian53.github.io/genai-lab/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pleiadian53.github.io/GRL/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pleiadian53.github.io/ehr-sequencing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://pleiadian53.github.io/cf-ensemble/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
