@@ -73,9 +73,9 @@
     <p>Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic
       modeling, and model interpretability. The through-line is older than the biology: work on
       parametric action formalisms for decision-making recast actions as operators on state space
-      rather than discrete symbols, and that idea returns now as the action-operator line in 
-      new editions of GRL and in self-supervised world models. In between came sequence modeling of longitudinal clinical
-      records. The projects below are threads with real lineage rather than a list, and the
+      rather than discrete symbols, and that idea returns now as the action-operator line in
+      current GRL work and in self-supervised world models. In between came sequence modeling of
+      longitudinal clinical records. The projects below are threads with real lineage rather than a list, and the
       schematic shows how they connect.</p>
     <p class="note">I go by <strong>Barnett Chiu</strong> and publish as <strong>Po-Hsiang
       Chiu</strong>; both resolve to <a href="https://orcid.org/0000-0001-8816-9799">ORCID
@@ -194,9 +194,9 @@
       <p class="meta"><code>github.com/pleiadian53/agentic-spliceai</code></p>
       <p>A model-agnostic framework for adaptive splice-site prediction and novel isoform
         discovery, in three layers: a <strong>base</strong> layer of per-nucleotide scores from
-        <em>any</em> foundation model (e.g. OpenSpliceAI), a <strong>meta</strong> layer that 
-        adapts them with multimodal context (conservation, chromatin, RNA-seq junctions, RBP binding), 
-        and an <strong>agentic</strong> layer over both.</p>
+        <em>any</em> foundation model (e.g. OpenSpliceAI), a <strong>meta</strong> layer that
+        adapts them with multimodal context (conservation, chromatin, RNA-seq junctions, RBP
+        binding), and an <strong>agentic</strong> layer over both.</p>
       <p>The agentic layer is the point. Splicing is context-dependent, and the evidence for it is
         both incomplete and still arriving: ENCODE eCLIP covers on the order of 150 RBPs against
         the roughly 1,500 encoded in the human genome, so any fixed feature table is a snapshot of
@@ -266,9 +266,9 @@
       <h3><a href="https://github.com/pleiadian53/GRL">GRL</a></h3>
       <p class="meta"><code>github.com/pleiadian53/GRL</code> &middot; generalized reinforcement learning</p>
       <p>The root of the action-operator idea ssl-lab now builds on. Actions as
-        <strong>operators</strong> on state space rather than discrete symbols. It is an operator-
-        and measurement-inspired formalism for decision-making, framing policy inference in terms
-        of operators, projections, and energy-based compatibility between states and actions.
+        <strong>operators</strong> on state space rather than discrete symbols: an operator- and
+        measurement-inspired formalism for decision-making, framing policy inference in terms of
+        operators, projections, and energy-based compatibility between states and actions.
         Originated in my doctoral work and extended since.</p>
       <p>Its first application was distributed computing for <strong>US&nbsp;ATLAS</strong> at
         Brookhaven National Laboratory: a Condor-based pilot factory for the PanDA workload
@@ -298,8 +298,8 @@
     <article class="proj">
       <h3><a href="https://github.com/pleiadian53/agentic-ai-lab">agentic-ai-lab</a></h3>
       <p class="meta"><code>github.com/pleiadian53/agentic-ai-lab</code></p>
-      <p>Where <strong>Nexus</strong> was built, a multi-agent research system that plans,
-        researches, writes, and edits, before being refactored into agentic-spliceai as its
+      <p>Where <strong>Nexus</strong> was built (a multi-agent research system that plans,
+        researches, writes, and edits) before being refactored into agentic-spliceai as its
         literature and evidence layer. The design patterns are the deliverable as much as the
         system.</p>
     </article>
@@ -347,9 +347,9 @@
       <h3><a href="https://github.com/pleiadian53/loinc-predictor">loinc-predictor</a></h3>
       <p class="meta"><code>github.com/pleiadian53/loinc-predictor</code></p>
       <p>A three-stage retrieval-and-ranking pipeline for LOINC code prediction and reliability
-        assessment. That is the interoperability problem that has to be solved before any of the
-        sequence modeling above is trustworthy. An independently reproduced prototype of clinical-analytics
-        work at Prognos Health.</p>
+        assessment. It addresses the interoperability problem that has to be solved before any of
+        the sequence modeling above is trustworthy. An independently reproduced prototype of
+        clinical-analytics work at Prognos Health.</p>
     </article>
 
     <article class="proj">
@@ -377,7 +377,7 @@
       <p class="meta"><code>github.com/pleiadian53/pgm-lab</code></p>
       <p>Probabilistic graphical models: a clean, reusable library of PGM building blocks, and
         research into novel methods for probabilistic modeling. Aimed at computational biology
-        <em>and</em> physics, the one line here that reaches past biology.</p>
+        <em>and</em> physics; it is the one line here that reaches past biology.</p>
     </article>
 
     <article class="proj">
