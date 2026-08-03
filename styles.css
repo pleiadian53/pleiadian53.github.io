@@ -126,10 +126,48 @@ a:focus-visible {
 
 /* --- masthead ---------------------------------------------------------- */
 
+/* A crop formation sits behind the masthead: a pattern found in a field that
+   looks designed, where the whole question is whether it means anything.
+   Delivered as a mask so the figure takes its colour from the theme token. */
 .masthead {
+  position: relative;
+  overflow: hidden;             /* clips the formation; also guards the page from it */
   padding: clamp(3.5rem, 9vw, 6.5rem) 0 2.75rem;
   margin-left: 0;
 }
+
+.masthead::before {
+  content: "";
+  position: absolute;
+  top: -13%;
+  right: -1%;
+  width: min(31rem, 74vw);
+  aspect-ratio: 1;
+  background-color: var(--signal);
+  opacity: 0.085;
+  /* Two mask layers intersected: the formation, and a radial fade so it
+     dissolves into the page instead of meeting the clip edge as a hard line. */
+  -webkit-mask-image: url("assets/crop-field.svg"),
+                      radial-gradient(ellipse at 52% 44%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
+  mask-image: url("assets/crop-field.svg"),
+              radial-gradient(ellipse at 52% 44%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
+  -webkit-mask-size: contain, 100% 100%;
+  mask-size: contain, 100% 100%;
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.masthead > * { position: relative; z-index: 1; }
+
+@media (prefers-color-scheme: dark) {
+  .masthead::before { opacity: 0.13; }
+}
+:root[data-theme="dark"] .masthead::before { opacity: 0.13; }
+:root[data-theme="light"] .masthead::before { opacity: 0.085; }
 
 @media (min-width: 56rem) {
   .masthead { padding-left: calc(var(--rail) + var(--gap)); }
