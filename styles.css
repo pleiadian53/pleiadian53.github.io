@@ -157,6 +157,9 @@ a:focus-visible {
   mask-repeat: no-repeat, no-repeat;
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
+  /* Pinned, not left to match-source: the SVG is coloured so it previews on its
+     own, and only its alpha may be allowed to matter. */
+  mask-mode: alpha, alpha;
   pointer-events: none;
   z-index: 0;
 }

@@ -1,4 +1,9 @@
-"""Crop-formation SVG used as a CSS mask (white = pattern, transparent = ground).
+"""Crop-formation SVG used as a CSS mask, and openable on its own.
+
+Masking reads only the ALPHA channel (the stylesheet pins `mask-mode: alpha`), so
+the ink colour below is free. It is set to a visible blue rather than white purely
+so the file previews in an image viewer instead of appearing blank on white.
+Changing INK does not change how the page renders; changing an `opacity` does.
 
 After the Zeals Knoll formation near Mere, Wiltshire, 5 July 2026 — catalogued by
 Temporary Temples as "free standing bubbles in a flower-like design". Original
@@ -11,6 +16,7 @@ designed because it is precise, so nothing here is randomised.
 import math
 from pathlib import Path
 
+INK = "#1f5fa8"          # preview colour only -- masking ignores hue, see docstring
 W = H = 640
 CX = CY = 320
 FOLD = 8
@@ -26,7 +32,7 @@ def at(angle_deg, dist, r, kind):
 # tramlines: the tractor tracks every formation is laid across
 for i in range(11):
     y = 24 + i * 60
-    tram.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="#fff" '
+    tram.append(f'<line x1="0" y1="{y}" x2="{W}" y2="{y}" stroke="{INK}" '
                 f'stroke-width="1.3" opacity="0.26"/>')
 
 # centre: a ringed circle, the recurring Wiltshire motif
@@ -49,10 +55,10 @@ ring.append((CX, CY, 302))
 
 parts = list(tram)
 for x, y, r in ring:
-    parts.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="{r:.2f}" fill="none" stroke="#fff" '
+    parts.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="{r:.2f}" fill="none" stroke="{INK}" '
                  f'stroke-width="{1.6 if r > 12 else 1.1}" opacity="0.66"/>')
 for x, y, r in solid:
-    parts.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="{r:.2f}" fill="#fff" opacity="0.30"/>')
+    parts.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="{r:.2f}" fill="{INK}" opacity="0.30"/>')
 
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
        + "".join(parts) + '</svg>')
