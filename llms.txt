@@ -72,10 +72,11 @@ computational biology broadly rather than only at the RNA work above.
   flagship line is Perturb-seq perturbation response with uncertainty quantification.
   https://github.com/pleiadian53/genai-lab · https://pleiadian53.github.io/genai-lab/
 - **GRL** (open source) — generalized reinforcement learning; actions as operators on state space
-  rather than discrete symbols. Originated as one half of his doctoral dissertation at the
-  University of Texas at Arlington; the other half was distributed computing for US ATLAS at
-  Brookhaven National Laboratory (a Condor-based pilot factory for the PanDA workload management
-  system). https://github.com/pleiadian53/GRL · https://pleiadian53.github.io/GRL/ ·
+  rather than discrete symbols, and the root of the action-operator idea ssl-lab now builds on.
+  Originated in his doctoral work at the University of Texas at Arlington. Its first application
+  was distributed computing for US ATLAS at Brookhaven National Laboratory — a Condor-based pilot
+  factory for the PanDA workload management system, where physics jobs were scheduled as
+  parametric actions. https://github.com/pleiadian53/GRL · https://pleiadian53.github.io/GRL/ ·
   arXiv:2208.04822
 - **causal-bio-lab** (open source) — causal inference, causal discovery, and causal representation
   learning for drug discovery and target identification.
@@ -123,11 +124,21 @@ Earlier repositories are on the GitHub profile.
 
 - Agentic-SpliceAI: an open-source framework for adaptive splice-site prediction and novel isoform
   discovery. Zenodo, 2026. https://doi.org/10.5281/zenodo.21696681
+- Clinical and temporal characterization of COVID-19 subgroups using patient vector embeddings of
+  electronic health records. Journal of the American Medical Informatics Association, 2023.
+  https://doi.org/10.1093/jamia/ocac208
 - Generalized reinforcement learning: experience particles, action operator, reinforcement field,
   memory association, and decision concepts. arXiv:2208.04822, 2022.
+- Machine learning-driven identification of early-life air toxic combinations associated with
+  childhood asthma outcomes. Journal of Clinical Investigation, 2021.
+  https://doi.org/10.1172/JCI152088
+- Predicting youth diabetes risk using NHANES data and machine learning. Scientific Reports, 2021.
+  https://doi.org/10.1038/s41598-021-90406-0
 - EHR-based phenotyping: bulk learning and evaluation. Journal of Biomedical Informatics, 2017.
-- Generalized reinforcement learning with an application in generic workload management systems.
-  Doctoral dissertation, University of Texas at Arlington.
+  https://doi.org/10.1016/j.jbi.2017.04.009
+- Pilot factory - a Condor-based system for scalable Pilot Job generation in the PanDA WMS
+  framework. Journal of Physics: Conference Series, 2010. US ATLAS.
+  https://doi.org/10.1088/1742-6596/219/6/062041
 
 Full list: https://scholar.google.com/citations?user=EE3r5rgAAAAJ
 
@@ -135,7 +146,7 @@ Full list: https://scholar.google.com/citations?user=EE3r5rgAAAAJ
 
 Prior positions include Envisagenics (RNA therapeutics), Prognos Health, the Icahn School of
 Medicine at Mount Sinai, the Department of Biomedical Informatics at Columbia University,
-IPsoft, and Brookhaven National Laboratory. PhD in Computer Science (AI track), University of
+IPsoft, and Brookhaven National Laboratory. PhD in Computer Science (AI Track), University of
 Texas at Arlington.
 
 ## How to cite
