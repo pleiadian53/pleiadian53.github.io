@@ -1,5 +1,19 @@
 """Generate the crop circle SVGs used as background masks.
 
+Five formations from the 2026 season (Temporary Temples catalogue). Geometry is
+original, constructed from each catalogue description -- nothing is traced from a
+photograph. Filenames follow how a formation is commonly read, not its shape.
+
+  cosmos    Zeals Knoll nr Mere, Wilts   5 Jul   free standing bubbles, flower-like
+  helix     Zurcher Weinland, CH        23 Jun   double spiral design
+  13moons   Roundway (2), Wilts         18 Jul   13-point star & crescent moon
+  trine     Bishopstone, Wilts           4 Jul   triangles and circles
+  cipher    Fox Hill, Wilts             21 Jul   long pictogram of circles, rings, keys
+
+The catalogue annotates commissioned formations explicitly; none of the five above
+carries such an annotation. Keep to unflagged entries when adding one.
+https://temporarytemples.co.uk/project/crop-circles-2026-season-info
+
 Masking reads only the ALPHA channel (the stylesheet pins `mask-mode: alpha`), so
 INK below is free. It is a visible blue rather than white purely so the files
 preview in an image viewer instead of appearing blank on white. Changing INK does
