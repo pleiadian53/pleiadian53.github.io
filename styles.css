@@ -16,12 +16,12 @@
   --signal-dim: #7ba0cc;
   --copper:     #9a5730;
 
-  --cc-op: 0.085;     /* masthead formation */
-  --cc-op-sm: 0.055;  /* in-page formations, quieter behind body text */
+  --cc-op: 0.20;      /* masthead formation */
+  --cc-op-sm: 0.15;   /* in-page formations, quieter behind body text */
 
   --measure: 36rem;   /* reading column — ~68 characters */
   --page: 62rem;      /* outer container; the schematic uses the full width */
-  --rail: 6.5rem;
+  --rail: 7.5rem;
   --gap: 2rem;
 
   --f-display: "Newsreader", Georgia, "Times New Roman", serif;
@@ -41,14 +41,14 @@
     --signal:     #6fa8e8;
     --signal-dim: #3c5f88;
     --copper:     #d08b5f;
-    --cc-op:      0.13;
-    --cc-op-sm:   0.085;
+    --cc-op:      0.26;
+    --cc-op-sm:   0.20;
   }
 }
 
 :root[data-theme="dark"] {
-  --cc-op: 0.13;
-  --cc-op-sm: 0.085;
+  --cc-op: 0.26;
+  --cc-op-sm: 0.20;
   --paper:      #0d1219;
   --plate:      #141c26;
   --ink:        #e3e9f0;
@@ -62,8 +62,8 @@
 }
 
 :root[data-theme="light"] {
-  --cc-op: 0.085;
-  --cc-op-sm: 0.055;
+  --cc-op: 0.20;
+  --cc-op-sm: 0.15;
   --paper:      #f7f8fa;
   --plate:      #eef1f5;
   --ink:        #131a24;
@@ -156,9 +156,9 @@ a:focus-visible {
   /* Two mask layers intersected: the formation, and a radial fade so it dissolves
      into the page instead of meeting the clip edge as a hard line. */
   -webkit-mask-image: var(--f-src),
-                      radial-gradient(ellipse at 52% 46%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
+                      radial-gradient(ellipse at 52% 46%, #000 50%, rgba(0,0,0,0.62) 74%, transparent 92%);
   mask-image: var(--f-src),
-              radial-gradient(ellipse at 52% 46%, #000 30%, rgba(0,0,0,0.35) 58%, transparent 76%);
+              radial-gradient(ellipse at 52% 46%, #000 50%, rgba(0,0,0,0.62) 74%, transparent 92%);
   -webkit-mask-size: contain, 100% 100%;
   mask-size: contain, 100% 100%;
   -webkit-mask-repeat: no-repeat, no-repeat;
@@ -262,10 +262,12 @@ a:focus-visible {
 .railtag {
   display: inline-block;
   font-family: var(--f-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-3);
+  color: var(--ink-2);
+  white-space: nowrap;
 }
 
 .col { min-width: 0; max-width: var(--measure); }
