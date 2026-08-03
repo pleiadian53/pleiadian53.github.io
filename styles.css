@@ -135,10 +135,9 @@ a:focus-visible {
 
 /* --- crop formations ---------------------------------------------------- */
 
-/* Five formations sit behind the page. Each is delivered as a MASK, so the figure
+/* Crop circles sit behind the page. Each is delivered as a MASK, so the figure
    takes its colour from the theme token and one file serves light and dark.
-   A section opts in with `.field` plus a `.f-*` modifier that supplies the source,
-   the size and the corner. */
+   A section opts in with `.field` plus a `.f-*` modifier below. */
 
 .field { position: relative; overflow: hidden; }  /* clip: also guards the page width */
 .field > * { position: relative; z-index: 1; }
@@ -173,21 +172,16 @@ a:focus-visible {
   z-index: 0;
 }
 
-/* Zeals Knoll nr Mere, 5 Jul 2026 - bubbles read as nested worlds */
+/* placements */
 .f-cosmos   { --f-src: url("assets/crop-cosmos.svg");
               --f-w: min(31rem, 74vw);  --f-top: -13%;  --f-right: -1%;
               --f-op: var(--cc-op); }
-/* Zurcher Weinland, 23 Jun 2026 - double spiral, which here reads as one thing */
 .f-helix    { --f-src: url("assets/crop-helix.svg");
               --f-w: min(22rem, 60vw);  --f-top: 5%;    --f-right: -4%; }
-/* Roundway, 18 Jul 2026 - 13-point star & crescent, the year's lunations */
 .f-13moons  { --f-src: url("assets/crop-13moons.svg");
               --f-w: min(23rem, 62vw);  --f-top: 8%;    --f-right: -5%; }
-/* Bishopstone, 4 Jul 2026 - triangles and circles, three bodies in aspect */
 .f-trine    { --f-src: url("assets/crop-trine.svg");
               --f-w: min(17rem, 50vw);  --f-top: 30%;   --f-right: -4%; }
-/* Fox Hill, 21 Jul 2026 - a long pictogram of circles, rings and keys.
-   The only one laid along a line, so it runs as a wide strip, not a disc. */
 .f-cipher   { --f-src: url("assets/crop-cipher.svg");
               --f-w: min(44rem, 100%);  --f-ar: 1240 / 260;
               --f-bottom: -6%; --f-right: -2%;

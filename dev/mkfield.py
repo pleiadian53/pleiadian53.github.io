@@ -1,20 +1,11 @@
-"""Crop-formation SVGs used as CSS masks, and openable on their own.
+"""Generate the crop circle SVGs used as background masks.
 
 Masking reads only the ALPHA channel (the stylesheet pins `mask-mode: alpha`), so
-the ink colour below is free. It is a visible blue rather than white purely so the
-files preview in an image viewer instead of appearing blank on white. Changing INK
-does not change how the page renders; changing an `opacity` does.
+INK below is free. It is a visible blue rather than white purely so the files
+preview in an image viewer instead of appearing blank on white. Changing INK does
+not change how the page renders; changing an `opacity` does.
 
-Each formation follows the VERBAL description of a 2026 field report catalogued by
-Temporary Temples. The geometry is original -- constructed from the description,
-not traced from a photograph. Only formations the catalogue does NOT annotate as
-commissioned are used; see README.
-
-Each file is named for how the formation is commonly READ, not for its shape and not
-as a claim about meaning: cosmos, 13moons, trine, helix, cipher.
-
-Fully deterministic. Exact symmetry is the point: a formation reads as designed
-because it is precise, so nothing here is randomised.
+Deterministic by design -- these are precise figures, so nothing is randomised.
 """
 import math
 from pathlib import Path
@@ -43,9 +34,6 @@ def wrap(parts, w, h, name):
     print(f"  {name:24s} {len(svg)/1024:5.1f} KB")
 
 
-# --- A. Zeals Knoll nr Mere, Wiltshire, 5 July 2026 --------------------------
-#     "free standing bubbles in a flower-like design" -- read as nested worlds,
-#     the universe at multiple scales.  -> cosmos
 def cosmos():
     W = H = 640
     CX = CY = 320
@@ -73,9 +61,6 @@ def cosmos():
     wrap(parts, W, H, "crop-cosmos.svg")
 
 
-# --- B. Roundway, Wiltshire, 18 July 2026 ------------------------------------
-#     "13-point star & crescent moon" -- read as the 13 lunations of a solar
-#     year.  -> 13moons
 def moons13():
     W = H = 640
     CX = CY = 320
@@ -105,9 +90,6 @@ def moons13():
     wrap(parts, W, H, "crop-13moons.svg")
 
 
-# --- C. Bishopstone, Wiltshire, 4 July 2026 ----------------------------------
-#     "triangles and circles" -- read as a trine, three bodies in aspect
-#     within one round.  -> trine
 def trine():
     W = H = 560
     CX = CY = 280
@@ -126,9 +108,6 @@ def trine():
     wrap(parts, W, H, "crop-trine.svg")
 
 
-# --- D. Zurcher Weinland, Switzerland, 23 June 2026 --------------------------
-#     "double spiral design" -- on a computational-biology page a double spiral
-#     reads as one thing.  -> helix
 def helix():
     W = H = 560
     CX = CY = 280
@@ -150,10 +129,6 @@ def helix():
     wrap(parts, W, H, "crop-helix.svg")
 
 
-# --- E. Fox Hill, Wiltshire, 21 July 2026 ------------------------------------
-#     "a long pictogram of circles, rings and keys" -- a line of glyphs reads as
-#     an inscription, and the keys as what unlocks it.  -> cipher
-#     Wide, not square: the only formation here laid out along a line.
 def cipher():
     W, H = 1240, 260
     MY = 130
