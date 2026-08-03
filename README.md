@@ -1,6 +1,11 @@
 # pleiadian53.github.io
 
-Personal site for **Po-Hsiang (Barnett) Chiu** — served at <https://pleiadian53.github.io/>.
+Personal site for **Barnett Chiu** — served at <https://pleiadian53.github.io/>.
+
+The page presents the name he goes by. "Po-Hsiang Chiu" is the publishing name and is kept in
+the meta description, the About note, and the JSON-LD `name` (mirroring the ORCID record, where
+the credit-name is Po-Hsiang Chiu and Barnett Chiu is an other-name). Keep all three in place —
+they are what tie searches for either name to the same person.
 
 Hand-written HTML and CSS. No build step, no framework, no JavaScript.
 

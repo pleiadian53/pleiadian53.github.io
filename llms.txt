@@ -1,13 +1,13 @@
-# Po-Hsiang (Barnett) Chiu
+# Barnett Chiu
 
 > Independent research scientist building end-to-end AI/ML systems for scientific discovery.
 > Based in New York.
 
 ## Identity
 
-Po-Hsiang Chiu and Barnett Chiu are the same person. Publications appear under
-"Po-Hsiang Chiu" (or "PH Chiu"); he also goes by "Barnett Chiu". Both names resolve to
-ORCID 0000-0001-8816-9799, which is the authoritative disambiguator.
+Barnett Chiu and Po-Hsiang Chiu are the same person. He goes by "Barnett Chiu"; publications
+appear under "Po-Hsiang Chiu" (or "PH Chiu"). Both names resolve to ORCID 0000-0001-8816-9799,
+which is the authoritative disambiguator.
 
 - Website: https://pleiadian53.github.io/
 - GitHub: https://github.com/pleiadian53
@@ -27,9 +27,9 @@ biological experimentation. Earlier work spans foundation-adaptor frameworks for
 prediction, probabilistic modeling, sequence modeling of longitudinal clinical records, and
 reinforcement learning.
 
-The connecting idea across his work is an operator view of action: his doctoral dissertation
-recast actions as operators on state space rather than discrete symbols, and that formalism now
-reappears as the action-operator line in self-supervised world models.
+The connecting idea across his work is an operator view of action: earlier work on parametric
+action formalisms recast actions as operators on state space rather than discrete symbols, and
+that formalism now reappears as the action-operator line in self-supervised world models.
 
 ## Projects
 
@@ -41,7 +41,7 @@ Both lines began during his time at Envisagenics and continue as independent wor
   prediction and novel isoform discovery. Extends any per-nucleotide scorer with meta-learning
   adaptors, multimodal context (conservation, chromatin, RNA-seq junctions, RBP binding), and an
   agentic reasoning layer driving LLM retrieval and validation over variant databases, tissue and
-  tumour RNA-seq, and the literature.
+  tumor RNA-seq, and the literature.
   https://github.com/pleiadian53/agentic-spliceai ·
   https://pleiadian53.github.io/agentic-spliceai/ · DOI 10.5281/zenodo.21696681
 - **meta-spliceai** (open source) — the foundation-adaptor meta-learning predecessor.
@@ -49,9 +49,9 @@ Both lines began during his time at Envisagenics and continue as independent wor
 - **nmdiff** (private) — self-supervised quantification of nonsense-mediated decay (NMD)
   efficiency per transcript. NMD is not only mRNA quality control but also quantity control:
   cells route a fraction of transcripts into PTC-bearing unproductive isoforms so NMD destroys
-  them, tuning protein output. No labelled dataset for NMD efficiency exists at scale, and
-  standard self-supervised pretext tasks are the wrong shape. Instead of freezing the labelling
-  function and learning the encoder, nmdiff makes the labelling rule itself a small, interpretable,
+  them, tuning protein output. No labeled dataset for NMD efficiency exists at scale, and
+  standard self-supervised pretext tasks are the wrong shape. Instead of freezing the labeling
+  function and learning the encoder, nmdiff makes the labeling rule itself a small, interpretable,
   biologically meaningful parameter vector and searches over it, selecting the hypothesis whose
   labels are most predictable from a disjoint view of the data — expression generates the labels,
   transcript structure predicts them, no feature crosses. Cross-view consistency rather than
@@ -88,7 +88,7 @@ computational biology broadly rather than only at the RNA work above.
   being refactored into agentic-spliceai. https://github.com/pleiadian53/agentic-ai-lab
 - **openclaw-py** (private) — a typed Python SDK for an agent operating system, plus the use cases
   that earned it: a scheduled research digest, per-topic agent personas and routing, pre-flight
-  checks before a model migration, and semantic memory measured against a labelled query set
+  checks before a model migration, and semantic memory measured against a labeled query set
   rather than trusted.
 - **llm-lab** (open source) — building blocks for LLM pre-training and post-training (SFT, DPO,
   RLHF, alignment) aimed at computational biology. https://github.com/pleiadian53/llm-lab

@@ -4,25 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery</title>
-<meta name="author" content="Po-Hsiang (Barnett) Chiu">
-<meta name="description" content="Po-Hsiang (Barnett) Chiu — independent research scientist building end-to-end AI/ML systems for scientific discovery. RNA splicing and decay, generative and self-supervised modeling, agentic systems, and clinical sequence data.">
+<title>Barnett Chiu — AI/ML systems for scientific discovery</title>
+<meta name="author" content="Barnett Chiu">
+<meta name="description" content="Barnett Chiu, who publishes as Po-Hsiang Chiu — independent research scientist building end-to-end AI/ML systems for scientific discovery. RNA splicing and decay, generative and self-supervised modeling, agentic systems, and clinical sequence data.">
 <meta name="keywords" content="Po-Hsiang Chiu, Barnett Chiu, machine learning, computational biology, RNA splicing, isoform discovery, nonsense-mediated decay, self-supervised learning, JEPA, generative models, agentic AI, reinforcement learning, EHR">
 <link rel="canonical" href="https://pleiadian53.github.io/">
 <link rel="alternate" type="text/plain" href="https://pleiadian53.github.io/llms.txt" title="LLM-readable summary">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery">
+<meta property="og:title" content="Barnett Chiu — AI/ML systems for scientific discovery">
 <meta property="og:description" content="Independent research scientist. RNA splicing and decay, generative and self-supervised modeling, agentic systems, clinical sequence data.">
 <meta property="og:url" content="https://pleiadian53.github.io/">
 <meta property="og:image" content="https://pleiadian53.github.io/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery">
-<meta property="og:site_name" content="Po-Hsiang (Barnett) Chiu">
+<meta property="og:image:alt" content="Barnett Chiu — AI/ML systems for scientific discovery">
+<meta property="og:site_name" content="Barnett Chiu">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Po-Hsiang (Barnett) Chiu — AI/ML systems for scientific discovery">
+<meta name="twitter:title" content="Barnett Chiu — AI/ML systems for scientific discovery">
 <meta name="twitter:description" content="Independent research scientist. RNA splicing and decay, generative and self-supervised modeling, agentic systems, clinical sequence data.">
 <meta name="twitter:image" content="https://pleiadian53.github.io/assets/og-image.png">
 
@@ -41,10 +41,10 @@
 
 <header class="masthead field f-cosmos">
   <p class="eyebrow">Independent research scientist &middot; New York</p>
-  <h1>Po-Hsiang <span class="alt">(Barnett)</span> Chiu</h1>
+  <h1>Barnett Chiu</h1>
   <p class="lede">I build end-to-end AI/ML systems for scientific discovery — models, data pipelines,
-    GPU infrastructure, and the application layer — as researcher, engineer, and product owner,
-    taking ambiguous scientific problems from first principles to implementation.</p>
+    GPU infrastructure, and the application layer. I take ambiguous scientific problems from first
+    principles to working implementation, as researcher, engineer, and product owner.</p>
   <nav class="idlinks" aria-label="Profiles">
     <a href="https://github.com/pleiadian53">GitHub</a>
     <a href="https://scholar.google.com/citations?user=EE3r5rgAAAAJ">Google&nbsp;Scholar</a>
@@ -168,7 +168,7 @@
         discovery. It extends <em>any</em> per-nucleotide scorer with meta-learning adaptors,
         multimodal context — conservation, chromatin, RNA-seq junctions, RBP binding — and an
         agentic reasoning layer that drives LLM retrieval and validation across variant databases,
-        tissue and tumour RNA-seq, and the literature, to surface disease-induced splice sites and
+        tissue and tumor RNA-seq, and the literature, to surface disease-induced splice sites and
         actionable isoforms.</p>
       <p>Builds on <a href="https://github.com/pleiadian53/meta-spliceai">meta-spliceai</a>, the
         foundation-adaptor predecessor. Its research agent, Nexus, came from agentic-ai-lab.</p>
@@ -184,10 +184,10 @@
         PTC-bearing unproductive isoforms precisely so NMD will destroy them, tuning protein
         output. That matters for antisense oligonucleotide design: a splice-switching drug only
         helps if the rescued transcript survives decay.</p>
-      <p>The obstacle is that no labelled dataset for NMD efficiency exists at scale, and the
+      <p>The obstacle is that no labeled dataset for NMD efficiency exists at scale, and the
         standard self-supervised toolkit is the wrong shape — no corruption you can apply to a
-        transcript has decay kinetics as its inverse. So rather than freezing the labelling
-        function and learning the encoder, nmdiff makes the <strong>labelling rule itself</strong>
+        transcript has decay kinetics as its inverse. So rather than freezing the labeling
+        function and learning the encoder, nmdiff makes the <strong>labeling rule itself</strong>
         a small, interpretable, biologically meaningful parameter vector and searches over it,
         selecting the hypothesis whose labels are most predictable from a <strong>disjoint
         view</strong> of the data: expression generates the labels, transcript structure predicts
@@ -207,7 +207,7 @@
       splicing work above.</p>
 
     <article class="proj">
-      <h3><a href="https://github.com/pleiadian53/ssl-lab">ssl-lab</a> <span class="now">active</span></h3>
+      <h3><a href="https://github.com/pleiadian53/ssl-lab">ssl-lab</a></h3>
       <p class="meta"><code>github.com/pleiadian53/ssl-lab</code></p>
       <p>JEPA pushed past representation learning in two directions. <strong>Generative JEPA</strong>
         adds a flow-matching prior over a frozen latent and a decoder back to data space, making
@@ -280,7 +280,7 @@
       <p>The applications are the interesting part — a scheduled research digest; per-topic agent
         personas and routing; pre-flight checks that tell you what a model migration would actually
         touch; and <strong>semantic memory measured rather than trusted</strong>, with retrieval
-        scored against a labelled query set and an extractor–verifier pair that fills memory
+        scored against a labeled query set and an extractor–verifier pair that fills memory
         instead of only searching it.</p>
     </article>
 
@@ -323,7 +323,7 @@
       <h3><a href="https://github.com/pleiadian53/cf-ensemble">cf-ensemble</a></h3>
       <p class="meta"><code>github.com/pleiadian53/cf-ensemble</code></p>
       <p>Ensemble learning through latent-factor collaborative filtering: treat classifiers and
-        instances as the two sides of a recommendation problem, and let matrix factorisation
+        instances as the two sides of a recommendation problem, and let matrix factorization
         reweight unreliable predictions. Built for disease risk modeling and phenotyping during my
         time at the Icahn School of Medicine at Mount&nbsp;Sinai.</p>
       <p class="links"><a href="https://pleiadian53.github.io/cf-ensemble/">Documentation</a></p>
@@ -423,7 +423,7 @@
 </main>
 
 <footer>
-  <p>Po-Hsiang (Barnett) Chiu &middot; ORCID
+  <p>Barnett Chiu &middot; ORCID
     <a href="https://orcid.org/0000-0001-8816-9799">0000-0001-8816-9799</a></p>
   <p class="fine">In case you were curious — the patterns behind the page are crop circles.</p>
   <p class="fine">Hand-written HTML and CSS. Source on
