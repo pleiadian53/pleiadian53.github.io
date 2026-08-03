@@ -22,7 +22,7 @@ Current work is in **computational biology**, along two lines that grew up indep
 
 The method line (ssl-lab, genai-lab) develops generative and self-supervised methods (VAE
 families, diffusion, flow matching, JEPA), modality-agnostically, targeting computational biology
-broadly — gene expression, perturbation response, and in-silico biological experimentation.
+broadly: gene expression, perturbation response, and in-silico biological experimentation.
 
 The RNA line (agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at
 Envisagenics. The two lines are siblings rather than a pipeline.
@@ -31,7 +31,7 @@ Alongside both runs agentic AI R&D, in agentic-ai-lab and openclaw-py. Agentic w
 scientific discovery in particular, because the ground keeps moving: assays are re-run,
 annotations revised, and results published between one release and the next, and a fixed pipeline
 has no way to go and look. That is why agentic-spliceai puts an agentic layer over its base and
-meta layers. Note that the agentic work is its own R&D track — it is not part of the generative
+meta layers. Note that the agentic work is its own R&D track, not part of the generative
 and self-supervised method line.
 
 Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic modeling,
@@ -47,27 +47,27 @@ that formalism now reappears as the action-operator line in self-supervised worl
 
 Both lines began during his time at Envisagenics and continue as independent work.
 
-- **agentic-spliceai** (open source) — a model-agnostic framework for adaptive splice-site
+- **agentic-spliceai** (open source): a model-agnostic framework for adaptive splice-site
   prediction and novel isoform discovery, built in three layers: a base layer of per-nucleotide
   scores from any foundation model, a meta layer adapting them with multimodal context
   (conservation, chromatin, RNA-seq junctions, RBP binding), and an agentic layer over both. The
   agentic layer is the point: splicing is context-dependent and its evidence is incomplete and
-  still arriving — ENCODE eCLIP covers on the order of 150 RBPs against the roughly 1,500 encoded
-  in the human genome — so any fixed feature table is a snapshot of what happened to be assayed.
+  still arriving. ENCODE eCLIP covers on the order of 150 RBPs against the roughly 1,500 encoded
+  in the human genome, so any fixed feature table is a snapshot of what happened to be assayed.
   The agent reaches across variant databases, tissue and tumor RNA-seq, and the literature not
   only to check a predicted site but to find the evidence that would support one.
   https://github.com/pleiadian53/agentic-spliceai ·
   https://pleiadian53.github.io/agentic-spliceai/ · DOI 10.5281/zenodo.21696681
-- **meta-spliceai** (open source) — the foundation-adaptor meta-learning predecessor.
+- **meta-spliceai** (open source): the foundation-adaptor meta-learning predecessor.
   https://github.com/pleiadian53/meta-spliceai
-- **nmdiff** (private) — self-supervised quantification of nonsense-mediated decay (NMD)
+- **nmdiff** (private): self-supervised quantification of nonsense-mediated decay (NMD)
   efficiency per transcript. NMD is not only mRNA quality control but also quantity control:
   cells route a fraction of transcripts into PTC-bearing unproductive isoforms so NMD destroys
   them, tuning protein output. No labeled dataset for NMD efficiency exists at scale, and
   standard self-supervised pretext tasks are the wrong shape. Instead of freezing the labeling
   function and learning the encoder, nmdiff makes the labeling rule itself a small, interpretable,
   biologically meaningful parameter vector and searches over it, selecting the hypothesis whose
-  labels are most predictable from a disjoint view of the data — expression generates the labels,
+  labels are most predictable from a disjoint view of the data: expression generates the labels,
   transcript structure predicts them, no feature crosses. Cross-view consistency rather than
   circular reasoning.
 
@@ -76,48 +76,48 @@ Both lines began during his time at Envisagenics and continue as independent wor
 Novel generative and self-supervised methods, developed modality-agnostically and aimed at
 computational biology broadly rather than only at the RNA work above.
 
-- **ssl-lab** (open source, active) — JEPA pushed past representation learning: a generative JEPA
+- **ssl-lab** (open source, active): JEPA pushed past representation learning: a generative JEPA
   (flow-matching prior over a frozen latent plus a decoder, making the representation sampleable)
   and an action-operator line that turns a passive predictor into a controllable world model.
   Modality-agnostic; methods mature here and return to genai-lab.
   https://github.com/pleiadian53/ssl-lab · https://pleiadian53.github.io/ssl-lab/
-- **genai-lab** (open source) — generative and predictive models (VAEs, diffusion, DiT, latent and
+- **genai-lab** (open source): generative and predictive models (VAEs, diffusion, DiT, latent and
   flow matching, JEPA, foundation-model adaptation) for in-silico biological experimentation;
   flagship line is Perturb-seq perturbation response with uncertainty quantification.
   https://github.com/pleiadian53/genai-lab · https://pleiadian53.github.io/genai-lab/
-- **GRL** (open source) — generalized reinforcement learning; actions as operators on state space
+- **GRL** (open source): generalized reinforcement learning; actions as operators on state space
   rather than discrete symbols, and the root of the action-operator idea ssl-lab now builds on.
   Originated in his doctoral work at the University of Texas at Arlington. Its first application
-  was distributed computing for US ATLAS at Brookhaven National Laboratory — a Condor-based pilot
+  was distributed computing for US ATLAS at Brookhaven National Laboratory, a Condor-based pilot
   factory for the PanDA workload management system, where physics jobs were scheduled as
   parametric actions. https://github.com/pleiadian53/GRL · https://pleiadian53.github.io/GRL/ ·
   arXiv:2208.04822
-- **causal-bio-lab** (open source) — causal inference, causal discovery, and causal representation
+- **causal-bio-lab** (open source): causal inference, causal discovery, and causal representation
   learning for drug discovery and target identification.
   https://github.com/pleiadian53/causal-bio-lab
 
 ### Agentic Systems
 
-- **agentic-ai-lab** (open source) — where the Nexus multi-agent research system was built before
+- **agentic-ai-lab** (open source): where the Nexus multi-agent research system was built before
   being refactored into agentic-spliceai. https://github.com/pleiadian53/agentic-ai-lab
-- **openclaw-py** (private) — a typed Python SDK for an agent operating system, plus the use cases
+- **openclaw-py** (private): a typed Python SDK for an agent operating system, plus the use cases
   that earned it: a scheduled research digest, per-topic agent personas and routing, pre-flight
   checks before a model migration, and semantic memory measured against a labeled query set
   rather than trusted.
-- **llm-lab** (open source) — building blocks for LLM pre-training and post-training (SFT, DPO,
+- **llm-lab** (open source): building blocks for LLM pre-training and post-training (SFT, DPO,
   RLHF, alignment) aimed at computational biology. https://github.com/pleiadian53/llm-lab
 
 ### Clinical and Health Data
 
-- **ehr-sequencing** (open source) — electronic health records as a language: medical codes as
+- **ehr-sequencing** (open source): electronic health records as a language: medical codes as
   tokens, patient histories as sequences, with LM-style encoders (BEHRT, transformers, recurrent
   baselines) for disease progression, survival modeling, and temporal phenotyping. Rooted in
   postdoctoral work at the Department of Biomedical Informatics, Columbia University.
   https://github.com/pleiadian53/ehr-sequencing · https://pleiadian53.github.io/ehr-sequencing/
-- **loinc-predictor** (open source) — three-stage retrieval-and-ranking for LOINC code prediction
+- **loinc-predictor** (open source): three-stage retrieval-and-ranking for LOINC code prediction
   and reliability assessment; an independently reproduced prototype of clinical-analytics work at
   Prognos Health. https://github.com/pleiadian53/loinc-predictor
-- **cf-ensemble** (open source) — ensemble learning through latent-factor collaborative filtering
+- **cf-ensemble** (open source): ensemble learning through latent-factor collaborative filtering
   for disease risk modeling and phenotyping, from work at the Icahn School of Medicine at Mount
   Sinai. https://github.com/pleiadian53/cf-ensemble
 
@@ -125,10 +125,10 @@ computational biology broadly rather than only at the RNA work above.
 
 Early lines, not yet part of a thread above.
 
-- **pgm-lab** (open source) — probabilistic graphical models: a reusable library of PGM building
+- **pgm-lab** (open source): probabilistic graphical models: a reusable library of PGM building
   blocks plus research into novel methods, aimed at computational biology and physics.
   https://github.com/pleiadian53/pgm-lab
-- **protein-ml-lab** (not public yet) — a depth study of the protein-ML stack: protein language
+- **protein-ml-lab** (not public yet): a depth study of the protein-ML stack: protein language
   models (ESM), structure prediction in the AlphaFold lineage, and generative design (RFdiffusion,
   ProteinMPNN, Chroma), with the cross-cutting frontier questions in biology foundation models.
 

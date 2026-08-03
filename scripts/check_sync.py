@@ -37,6 +37,10 @@ IDENTITY = {
 # The site settled on US spelling. These are the forms that keep creeping back.
 UK_FORMS = ["tumour", "labelled", "labelling", "factorisation", "modelling", "behaviour"]
 
+# Em dashes are kept to one or two per document at most. Used heavily they make prose
+# read as over-edited, and they are a common tell of machine-written text.
+EM_DASH_BUDGET = 2
+
 
 def strip_markup(html: str) -> str:
     """Drop tags and JSON-LD so prose checks never match attribute names.
@@ -108,7 +112,9 @@ def main() -> int:
             print(f"  ok     {label}")
 
     print("\nDISPLAY NAME")
-    title = re.search(r"<title>(.*?)\s*—", html)
+    # The title is "<name><separator><tagline>". Accept any separator the page may use,
+    # so changing it is a style decision rather than a reason for this check to fail.
+    title = re.search(r"<title>([^<]*?)\s*(?:&middot;|&mdash;|·|—|\|)", html)
     h1 = re.search(r"<h1>(.*?)</h1>", html)
     heads = {"<title>": title.group(1).strip() if title else "?",
              "<h1>": strip_markup(h1.group(1)).strip() if h1 else "?"}
@@ -132,6 +138,22 @@ def main() -> int:
             print(f"  DRIFT  '{form}' in {', '.join(hits)}")
     if not any(p.startswith("UK spelling") for p in problems):
         print("  ok     no UK forms found")
+
+    print(f"\nEM DASHES (budget: {EM_DASH_BUDGET} per document)")
+    for name, text in surfaces.items():
+        n = (prose if name == "index.html" else text).count("—")
+        if n > EM_DASH_BUDGET:
+            problems.append(f"{name} has {n} em dashes (budget {EM_DASH_BUDGET})")
+            print(f"  DRIFT  {name}: {n}")
+        else:
+            print(f"  ok     {name}: {n}")
+    readme = ROOT / "README.md"
+    n = readme.read_text().count("—")
+    if n > EM_DASH_BUDGET:
+        problems.append(f"README.md has {n} em dashes (budget {EM_DASH_BUDGET})")
+        print(f"  DRIFT  README.md: {n}")
+    else:
+        print(f"  ok     README.md: {n}")
 
     print("\nPUBLICATION DOIs (site vs llms.txt)")
     only_site = dois(html) - dois(llms)
