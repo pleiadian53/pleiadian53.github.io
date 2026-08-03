@@ -16,7 +16,7 @@ ORCID 0000-0001-8816-9799, which is the authoritative disambiguator.
 - LinkedIn: https://www.linkedin.com/in/barnettchiu53
 - Email: barnettchiu@gmail.com
 
-## What he works on
+## What He Works On
 
 Current work is in **computational biology**, on two fronts that feed each other: developing
 generative and self-supervised methods (VAE families, diffusion, flow matching, JEPA) and agentic
@@ -33,7 +33,7 @@ reappears as the action-operator line in self-supervised world models.
 
 ## Projects
 
-### RNA therapeutics (active)
+### RNA Therapeutics (active)
 
 Both lines began during his time at Envisagenics and continue as independent work.
 
@@ -57,7 +57,7 @@ Both lines began during his time at Envisagenics and continue as independent wor
   transcript structure predicts them, no feature crosses. Cross-view consistency rather than
   circular reasoning.
 
-### Generative and self-supervised modeling (active)
+### Generative and Self-Supervised Modeling (active)
 
 Novel generative and self-supervised methods, developed modality-agnostically and aimed at
 computational biology broadly rather than only at the RNA work above.
@@ -81,7 +81,7 @@ computational biology broadly rather than only at the RNA work above.
   learning for drug discovery and target identification.
   https://github.com/pleiadian53/causal-bio-lab
 
-### Agentic systems
+### Agentic Systems
 
 - **agentic-ai-lab** (open source) — where the Nexus multi-agent research system was built before
   being refactored into agentic-spliceai. https://github.com/pleiadian53/agentic-ai-lab
@@ -92,7 +92,7 @@ computational biology broadly rather than only at the RNA work above.
 - **llm-lab** (open source) — building blocks for LLM pre-training and post-training (SFT, DPO,
   RLHF, alignment) aimed at computational biology. https://github.com/pleiadian53/llm-lab
 
-### Clinical and health data
+### Clinical and Health Data
 
 - **ehr-sequencing** (open source) — electronic health records as a language: medical codes as
   tokens, patient histories as sequences, with LM-style encoders (BEHRT, transformers, recurrent
@@ -111,7 +111,7 @@ computational biology broadly rather than only at the RNA work above.
 pgm-lab (probabilistic graphical models for computational biology and physics), protein-ml-lab,
 and earlier repositories are on the GitHub profile.
 
-## Selected writing
+## Selected Publications
 
 - Agentic-SpliceAI: an open-source framework for adaptive splice-site prediction and novel isoform
   discovery. Zenodo, 2026. https://doi.org/10.5281/zenodo.21696681
