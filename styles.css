@@ -225,10 +225,10 @@ a:focus-visible {
     grid-template-columns: var(--rail) minmax(0, 1fr);
     column-gap: var(--gap);
   }
-  /* The schematic needs every pixel it can get, so its band drops the rail column
-     and the label sits above the figure instead of beside it. */
-  .band.wide { grid-template-columns: minmax(0, 1fr); }
-  .band.wide .rail { padding-top: 0; }
+  /* The schematic needs every pixel it can get. Rather than collapsing the band,
+     the figure alone breaks out of the content column and back across the rail,
+     so the rail label and heading stay where every other section puts them. */
+  .band.wide .schematic { margin-left: calc(-1 * (var(--rail) + var(--gap))); }
 }
 
 .rail { padding-top: 0.35rem; }
