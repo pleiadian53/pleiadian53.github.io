@@ -225,6 +225,10 @@ a:focus-visible {
     grid-template-columns: var(--rail) minmax(0, 1fr);
     column-gap: var(--gap);
   }
+  /* The schematic needs every pixel it can get, so its band drops the rail column
+     and the label sits above the figure instead of beside it. */
+  .band.wide { grid-template-columns: minmax(0, 1fr); }
+  .band.wide .rail { padding-top: 0; }
 }
 
 .rail { padding-top: 0.35rem; }
@@ -367,7 +371,7 @@ a:focus-visible {
 .schematic svg {
   display: block;
   width: 100%;
-  min-width: 620px;
+  min-width: 720px;
   height: auto;
   padding: 0.75rem 1rem;
 }
@@ -387,7 +391,7 @@ a:focus-visible {
 .schematic .node text {
   fill: var(--ink);
   font-family: var(--f-mono);
-  font-size: 13.5px;
+  font-size: 16px;
   text-anchor: middle;
 }
 
@@ -408,14 +412,14 @@ a:focus-visible {
 .schematic .edgelab text {
   fill: var(--ink-3);
   font-family: var(--f-mono);
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.04em;
 }
 
 .schematic .tracklab text {
   fill: var(--ink-3);
   font-family: var(--f-mono);
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }

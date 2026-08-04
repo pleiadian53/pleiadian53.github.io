@@ -83,20 +83,21 @@
   </div>
 </section>
 
-<section class="band bleed" aria-labelledby="map-h">
+<section class="band bleed wide" aria-labelledby="map-h">
   <div class="rail"><span class="railtag">Map</span></div>
   <div class="col">
     <h2 id="map-h">How the Work Connects</h2>
     <figure class="schematic">
       <div class="scroller" tabindex="0" role="group" aria-label="Project lineage diagram, scrollable">
-        <svg viewBox="0 0 940 344" role="img" aria-labelledby="svg-t svg-d">
+        <svg viewBox="0 0 1000 420" role="img" aria-labelledby="svg-t svg-d">
           <title id="svg-t">Lineage of research projects</title>
           <desc id="svg-d">Method track: GRL supplies action operators to ssl-lab, which matures
             methods for genai-lab, sibling to causal-bio-lab. Application track: agentic-ai-lab
             contributed the Nexus agent to agentic-spliceai, which pairs with nmdiff through
-            AS-NMD coupling; openclaw-py descends from agentic-ai-lab. ssl-lab's sense and perturb
-            operators also feed agentic-spliceai. Clinical track: ehr-sequencing with
-            loinc-predictor, and cf-ensemble.</desc>
+            AS-NMD coupling; openclaw-py descends from agentic-ai-lab. Two methods travel down
+            from ssl-lab: its sense and perturb operators feed agentic-spliceai, and its action
+            operators carry over to protein-ml-lab through the SE(3) structure they share.
+            Clinical track: ehr-sequencing with loinc-predictor, and cf-ensemble.</desc>
 
           <defs>
             <marker id="ah" class="mk" viewBox="0 0 8 8" refX="7.5" refY="4"
@@ -117,66 +118,70 @@
           </defs>
 
           <g class="tracklab">
-            <text x="86" y="60" text-anchor="end">method</text>
-            <text x="86" y="180" text-anchor="end">application</text>
-            <text x="86" y="304" text-anchor="end">clinical</text>
+            <text x="95" y="74" text-anchor="end">method</text>
+            <text x="95" y="226" text-anchor="end">application</text>
+            <text x="95" y="386" text-anchor="end">clinical</text>
           </g>
 
           <g class="edge">
-            <path d="M184 56 H294" marker-end="url(#ah)"/>
-            <path d="M404 56 H504" marker-end="url(#ah)"/>
-            <path d="M628 56 H718"/>
-            <path d="M260 176 H360" marker-end="url(#ah)"/>
-            <path d="M534 176 H654" class="bi"
+            <path d="M180 68 H242" marker-end="url(#ah)"/>
+            <path d="M348 68 H410" marker-end="url(#ah)"/>
+            <path d="M536 68 H598"/>
+            <path d="M284 220 H369" marker-end="url(#ah)"/>
+            <path d="M561 220 H646" class="bi"
                   marker-start="url(#ah-bi)" marker-end="url(#ah-bi)"/>
-            <path d="M185 194 V214" marker-end="url(#ah)"/>
-            <path d="M265 300 H330"/>
-            <path d="M349 74 V118 H447 V158" class="dash" marker-end="url(#ah-dash)"/>
+            <path d="M197 240 V268" marker-end="url(#ah)"/>
+            <path d="M284 380 H344"/>
+            <path d="M330 88 V108 H883 V200" class="dash" marker-end="url(#ah-dash)"/>
+            <path d="M280 88 V136 H465 V200" class="dash" marker-end="url(#ah-dash)"/>
           </g>
 
           <g class="edgelab">
-            <text x="239" y="30" text-anchor="middle">operators</text>
-            <text x="454" y="30" text-anchor="middle">methods</text>
-            <text x="673" y="30" text-anchor="middle">siblings</text>
-            <text x="310" y="150" text-anchor="middle">Nexus</text>
-            <text x="594" y="139" text-anchor="middle">AS&ndash;NMD</text>
-            <text x="594" y="151" text-anchor="middle">coupling</text>
-            <text x="401" y="133" text-anchor="middle">sense / perturb</text>
+            <text x="211" y="40" text-anchor="middle">operators</text>
+            <text x="379" y="40" text-anchor="middle">methods</text>
+            <text x="567" y="40" text-anchor="middle">siblings</text>
+            <text x="690" y="100" text-anchor="middle">SE(3) operators</text>
+            <text x="373" y="128" text-anchor="middle">sense / perturb</text>
+            <text x="326" y="190" text-anchor="middle">Nexus</text>
+            <text x="603" y="178" text-anchor="middle">AS&ndash;NMD</text>
+            <text x="603" y="192" text-anchor="middle">coupling</text>
           </g>
 
           <g class="node">
-            <rect x="110" y="38" width="74" height="36" rx="3"/>
-            <text x="147" y="61">GRL</text>
-            <rect x="294" y="38" width="110" height="36" rx="3" class="hot"/>
-            <text x="349" y="61">ssl-lab</text>
-            <rect x="504" y="38" width="124" height="36" rx="3"/>
-            <text x="566" y="61">genai-lab</text>
-            <rect x="718" y="38" width="164" height="36" rx="3"/>
-            <text x="800" y="61">causal-bio-lab</text>
+            <rect x="110" y="48" width="70" height="40" rx="3"/>
+            <text x="145" y="74">GRL</text>
+            <rect x="242" y="48" width="106" height="40" rx="3" class="hot"/>
+            <text x="295" y="74">ssl-lab</text>
+            <rect x="410" y="48" width="126" height="40" rx="3"/>
+            <text x="473" y="74">genai-lab</text>
+            <rect x="598" y="48" width="174" height="40" rx="3"/>
+            <text x="685" y="74">causal-bio-lab</text>
 
-            <rect x="110" y="158" width="150" height="36" rx="3"/>
-            <text x="185" y="181">agentic-ai-lab</text>
-            <rect x="360" y="158" width="174" height="36" rx="3" class="hot"/>
-            <text x="447" y="181">agentic-spliceai</text>
-            <rect x="654" y="158" width="104" height="36" rx="3" class="priv"/>
-            <text x="706" y="181">nmdiff</text>
+            <rect x="110" y="200" width="174" height="40" rx="3"/>
+            <text x="197" y="226">agentic-ai-lab</text>
+            <rect x="369" y="200" width="192" height="40" rx="3" class="hot"/>
+            <text x="465" y="226">agentic-spliceai</text>
+            <rect x="646" y="200" width="98" height="40" rx="3" class="priv"/>
+            <text x="695" y="226">nmdiff</text>
+            <rect x="796" y="200" width="174" height="40" rx="3" class="priv"/>
+            <text x="883" y="226">protein-ml-lab</text>
 
-            <rect x="122" y="214" width="126" height="36" rx="3" class="priv"/>
-            <text x="185" y="237">openclaw-py</text>
+            <rect x="124" y="268" width="146" height="40" rx="3" class="priv"/>
+            <text x="197" y="294">openclaw-py</text>
 
-            <rect x="110" y="282" width="155" height="36" rx="3"/>
-            <text x="187" y="305">ehr-sequencing</text>
-            <rect x="330" y="282" width="155" height="36" rx="3"/>
-            <text x="407" y="305">loinc-predictor</text>
-            <rect x="551" y="282" width="139" height="36" rx="3"/>
-            <text x="620" y="305">cf-ensemble</text>
+            <rect x="110" y="360" width="174" height="40" rx="3"/>
+            <text x="197" y="386">ehr-sequencing</text>
+            <rect x="344" y="360" width="182" height="40" rx="3"/>
+            <text x="435" y="386">loinc-predictor</text>
+            <rect x="586" y="360" width="146" height="40" rx="3"/>
+            <text x="659" y="386">cf-ensemble</text>
           </g>
         </svg>
       </div>
-      <figcaption>Arrows read as flow. Grey edges are code lineage, the dashed edge is a method
+      <figcaption>Arrows read as flow. Grey edges are code lineage, dashed edges are methods
         borrowed rather than forked, and the copper edge is a biological coupling, not a
         dependency. Unarrowed edges are associations.
-        <span class="key"><span class="sw priv-sw"></span>private</span></figcaption>
+        <span class="key"><span class="sw priv-sw"></span>private or not yet public</span></figcaption>
     </figure>
   </div>
 </section>
