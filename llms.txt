@@ -123,7 +123,7 @@ computational biology broadly rather than only at the RNA work above.
 
 ### Other Projects (incubating)
 
-Early lines, not yet part of a thread above.
+Early lines, still finding their shape.
 
 - **pgm-lab** (open source): probabilistic graphical models: a reusable library of PGM building
   blocks plus research into novel methods, aimed at computational biology and physics.
