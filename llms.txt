@@ -34,7 +34,7 @@ He is currently developing several ML/AI R&D ideas, with biology as the main set
   (agentic-ai-lab, openclaw-py, agentic-spliceai).
 
 These ideas meet a concrete problem in RNA therapeutics, splicing and decay (agentic-spliceai,
-nmdiff), a line that began during his time at Envisagenics.
+nmdiff), a line that began with his work at Envisagenics.
 
 The action-operator idea is the oldest of these and runs through the rest. In GRL, which began in
 his doctoral work, an action is not a discrete symbol but a parametric operator that transforms
