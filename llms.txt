@@ -18,14 +18,19 @@ which is the authoritative disambiguator.
 
 ## What He Works On
 
-Current work is in **computational biology**, along two lines that grew up independently.
+What excites him most is developing **new ML methods and systems**, with hard scientific problems
+as the proving ground: noisy measurements, scarce labels, mechanisms only partly known, and simple
+baselines that are surprisingly hard to beat. The interest is in AI/ML for scientific discovery
+across **biological and physical systems**. Physics came first: the action formalism behind GRL was first
+applied to scheduling physics jobs for the US ATLAS experiment, and physical systems remain a
+setting he would like to work in.
 
-The method line (ssl-lab, genai-lab) develops generative and self-supervised methods (VAE
-families, diffusion, flow matching, JEPA), modality-agnostically, targeting computational biology
-broadly: gene expression, perturbation response, and in-silico biological experimentation.
-
-The RNA line (agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at
-Envisagenics. The two lines are siblings rather than a pipeline.
+In recent years the setting has been biology, along two lines that grew up independently. The
+method line (ssl-lab, genai-lab, tabular-icl-lab) develops generative and self-supervised methods
+(VAE families, diffusion, flow matching, JEPA), modality-agnostic by design and aimed at
+generating experimental data that can be trusted like measured data. The RNA line
+(agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at Envisagenics.
+The two lines are siblings rather than a pipeline.
 
 Alongside both runs agentic AI R&D, in agentic-ai-lab and openclaw-py. Agentic workflows suit
 scientific discovery in particular, because the ground keeps moving: assays are re-run,
@@ -81,7 +86,8 @@ computational biology broadly rather than only at the RNA work above.
   prioritized in silico. Flagship: single-cell Perturb-seq, generating the perturbed cell
   population for gene combinations never measured, scored against a from-scratch model and a
   training-free reference. JEPA is the starting point, made generative with a latent prior and a
-  likelihood-matched decoder; a second thread treats perturbations and interventions as action
+  likelihood-matched decoder. The encoder is a replaceable stage, so the same benchmark can ask
+  what pretrained single-cell foundation models such as Geneformer add. A second thread treats perturbations and interventions as action
   operators on the latent state (from GRL), a world model for settings such as digital
   phenotyping. A companion ECG study finds self-supervised pretraining adds 0.078 AUROC with 5% of
   patients labeled and ties with full labels. Modality-agnostic; methods mature here and return
