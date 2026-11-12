@@ -92,11 +92,13 @@
         <svg viewBox="0 0 1000 420" role="img" aria-labelledby="svg-t svg-d">
           <title id="svg-t">Lineage of research projects</title>
           <desc id="svg-d">Method track: GRL supplies action operators to ssl-lab, which matures
-            methods for genai-lab, sibling to causal-bio-lab. Application track: agentic-ai-lab
+            methods for genai-lab, sibling to causal-bio-lab; ssl-lab's perturbation benchmark also
+            seeds tabular-icl-lab. Application track: agentic-ai-lab
             contributed the Nexus agent to agentic-spliceai, which pairs with nmdiff through
             AS-NMD coupling; openclaw-py descends from agentic-ai-lab. Two methods travel down
             from ssl-lab: its sense and perturb operators feed agentic-spliceai, and its action
-            operators carry over to protein-ml-lab through the SE(3) structure they share.
+            operators and protein-ml-lab's SE(3) symmetries share Lie-group structure, and the operator
+            theory develops in both directions between them.
             Clinical track: ehr-sequencing with loinc-predictor, and cf-ensemble.</desc>
 
           <defs>
@@ -132,7 +134,9 @@
                   marker-start="url(#ah-bi)" marker-end="url(#ah-bi)"/>
             <path d="M197 240 V268" marker-end="url(#ah)"/>
             <path d="M284 380 H344"/>
-            <path d="M330 88 V108 H883 V200" class="dash" marker-end="url(#ah-dash)"/>
+            <path d="M330 88 V108 H883 V200" class="dash"
+                  marker-start="url(#ah-dash)" marker-end="url(#ah-dash)"/>
+            <path d="M318 48 V22 H888 V48" class="dash" marker-end="url(#ah-dash)"/>
             <path d="M280 88 V136 H465 V200" class="dash" marker-end="url(#ah-dash)"/>
           </g>
 
@@ -140,7 +144,8 @@
             <text x="211" y="40" text-anchor="middle">operators</text>
             <text x="379" y="40" text-anchor="middle">methods</text>
             <text x="567" y="40" text-anchor="middle">siblings</text>
-            <text x="690" y="100" text-anchor="middle">SE(3) operators</text>
+            <text x="690" y="100" text-anchor="middle">Lie / SE(3) operators</text>
+            <text x="700" y="15" text-anchor="middle">perturbation benchmark</text>
             <text x="373" y="128" text-anchor="middle">sense / perturb</text>
             <text x="326" y="190" text-anchor="middle">Nexus</text>
             <text x="603" y="178" text-anchor="middle">AS&ndash;NMD</text>
@@ -156,6 +161,8 @@
             <text x="473" y="74">genai-lab</text>
             <rect x="598" y="48" width="174" height="40" rx="3"/>
             <text x="685" y="74">causal-bio-lab</text>
+            <rect x="800" y="48" width="176" height="40" rx="3"/>
+            <text x="888" y="74">tabular-icl-lab</text>
 
             <rect x="110" y="200" width="174" height="40" rx="3"/>
             <text x="197" y="226">agentic-ai-lab</text>
@@ -163,7 +170,7 @@
             <text x="465" y="226">agentic-spliceai</text>
             <rect x="646" y="200" width="98" height="40" rx="3" class="priv"/>
             <text x="695" y="226">nmdiff</text>
-            <rect x="796" y="200" width="174" height="40" rx="3" class="priv"/>
+            <rect x="796" y="200" width="174" height="40" rx="3"/>
             <text x="883" y="226">protein-ml-lab</text>
 
             <rect x="124" y="268" width="146" height="40" rx="3" class="priv"/>
@@ -247,14 +254,35 @@
     <article class="proj">
       <h3><a href="https://github.com/pleiadian53/ssl-lab">ssl-lab</a></h3>
       <p class="meta"><code>github.com/pleiadian53/ssl-lab</code></p>
-      <p>JEPA pushed past representation learning in two directions. <strong>Generative JEPA</strong>
-        adds a flow-matching prior over a frozen latent and a decoder back to data space, making
-        the representation sampleable, i.e. generation <em>given an intervention</em> rather than
-        unconditioned. <strong>Action operators</strong> promote JEPA's blind positional query to a
-        learned operator the model chooses and conditions on, turning a passive predictor into a
-        controllable world model that can roll futures forward and run counterfactuals.</p>
-      <p>Deliberately modality-agnostic: methods are de-risked here and returned to genai-lab.</p>
+      <p>Methods for <strong>generating biological data that can be trusted like measured
+        data</strong>: given a system and an intervention, generate the dataset the experiment
+        would have produced, accurately enough to explore and prioritize work that today needs new
+        sequencing runs or assays. The flagship is single-cell Perturb-seq, where the model
+        generates the perturbed cell population, effect sizes and cell-to-cell variation included,
+        for gene combinations never measured. Every result is scored against a model trained from
+        scratch and a training-free reference.</p>
+      <p>JEPA is the starting point, as the self-supervised frontier most worth extending: a latent
+        prior and a likelihood-matched decoder make it generative. A second thread treats
+        perturbations and interventions as <strong>action operators</strong> on the latent state,
+        the idea from GRL, so the same model reads as a world model that rolls a state forward
+        under an intervention, as in digital phenotyping. A companion ECG study measures where
+        self-supervised pretraining pays off: with labels for 5% of patients it adds 0.078 AUROC,
+        and the gain fades to a tie with full labels.</p>
+      <p>Deliberately modality-agnostic: methods mature here and return to genai-lab.</p>
       <p class="links"><a href="https://pleiadian53.github.io/ssl-lab/">Documentation</a></p>
+    </article>
+
+    <article class="proj">
+      <h3><a href="https://github.com/pleiadian53/tabular-icl-lab">tabular-icl-lab</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/tabular-icl-lab</code> &middot; early stage</p>
+      <p>Tabular foundation models and in-context learning (TabPFN) for computational biology. A
+        model pretrained on synthetic datasets predicts from labeled rows passed in as context,
+        with no training and a full predictive distribution, which makes it a strong, tuning-free
+        reference wherever biological data end up small and structured. Its first question comes
+        from ssl-lab: adding two single-gene effects is very hard to beat in perturbation data, so
+        can an in-context learner predict the genetic interaction that additivity misses? Longer
+        term the prior becomes the lever, fitted to a simulator of gene regulation under
+        intervention so that the model's inductive bias encodes how the system works.</p>
     </article>
 
     <article class="proj">
@@ -270,7 +298,9 @@
     <article class="proj">
       <h3><a href="https://github.com/pleiadian53/GRL">GRL</a></h3>
       <p class="meta"><code>github.com/pleiadian53/GRL</code> &middot; generalized reinforcement learning</p>
-      <p>The root of the action-operator idea ssl-lab now builds on. Actions as
+      <p>The origin of the action-operator idea, which ssl-lab carries into perturbations and world
+        models and protein-ml-lab into the Lie-group symmetries of molecular structure, while the
+        formalism itself keeps maturing here. Actions as
         <strong>operators</strong> on state space rather than discrete symbols: an operator- and
         measurement-inspired formalism for decision-making, framing policy inference in terms of
         operators, projections, and energy-based compatibility between states and actions.
@@ -387,15 +417,18 @@
     </article>
 
     <article class="proj">
-      <h3>protein-ml-lab <span class="tag">not public yet</span></h3>
+      <h3><a href="https://github.com/pleiadian53/protein-ml-lab">protein-ml-lab</a></h3>
+      <p class="meta"><code>github.com/pleiadian53/protein-ml-lab</code> &middot; early stage</p>
       <p>A depth study of the protein-ML stack: protein language models (ESM), structure prediction
         in the AlphaFold lineage, and generative design (RFdiffusion, ProteinMPNN, Chroma), together
         with the cross-cutting frontier questions in biology foundation models, from mechanistic
         interpretability to agentic systems built over them.</p>
       <p>Protein structure lives on <strong>SE(3)</strong>, so the equivariant architectures in
-        that lineage are built on a group acting on a state space. That is the same object as the
-        action operators in GRL and ssl-lab, with the Lie algebra supplying the infinitesimal
-        view.</p>
+        that lineage, from structure prediction to protein and antibody design, are built on a
+        Lie group acting on a state space. That is the same object as the action operators in GRL
+        and ssl-lab, with the Lie algebra supplying the infinitesimal view. Here the group is given
+        by physics rather than learned, which makes this the place to develop action-operator
+        theory and implementation against a case where the right answer is known.</p>
     </article>
 
     <p class="note">Earlier work lives on the
@@ -529,6 +562,10 @@
       "Flow Matching",
       "Diffusion Models",
       "Perturbation Modeling",
+      "World Models",
+      "Tabular Foundation Models",
+      "In-Context Learning",
+      "Geometric Deep Learning",
       "Agentic AI",
       "Multi-Agent Systems",
       "Reinforcement Learning",

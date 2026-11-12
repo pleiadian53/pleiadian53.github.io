@@ -76,17 +76,29 @@ Both lines began during his time at Envisagenics and continue as independent wor
 Novel generative and self-supervised methods, developed modality-agnostically and aimed at
 computational biology broadly rather than only at the RNA work above.
 
-- **ssl-lab** (open source, active): JEPA pushed past representation learning: a generative JEPA
-  (flow-matching prior over a frozen latent plus a decoder, making the representation sampleable)
-  and an action-operator line that turns a passive predictor into a controllable world model.
-  Modality-agnostic; methods mature here and return to genai-lab.
-  https://github.com/pleiadian53/ssl-lab · https://pleiadian53.github.io/ssl-lab/
+- **ssl-lab** (open source, active): methods for generating biological data that can be trusted
+  like measured data, so experiments that need new sequencing runs or assays can be explored and
+  prioritized in silico. Flagship: single-cell Perturb-seq, generating the perturbed cell
+  population for gene combinations never measured, scored against a from-scratch model and a
+  training-free reference. JEPA is the starting point, made generative with a latent prior and a
+  likelihood-matched decoder; a second thread treats perturbations and interventions as action
+  operators on the latent state (from GRL), a world model for settings such as digital
+  phenotyping. A companion ECG study finds self-supervised pretraining adds 0.078 AUROC with 5% of
+  patients labeled and ties with full labels. Modality-agnostic; methods mature here and return
+  to genai-lab. https://github.com/pleiadian53/ssl-lab · https://pleiadian53.github.io/ssl-lab/
+- **tabular-icl-lab** (open source, early stage): tabular foundation models and in-context
+  learning (TabPFN) for computational biology, as strong tuning-free references for small,
+  structured biological data. First question, from ssl-lab: can an in-context learner predict the
+  genetic interaction that adding two single-gene effects misses? Longer term, priors built from
+  simulators of gene regulation under intervention. https://github.com/pleiadian53/tabular-icl-lab
 - **genai-lab** (open source): generative and predictive models (VAEs, diffusion, DiT, latent and
   flow matching, JEPA, foundation-model adaptation) for in-silico biological experimentation;
   flagship line is Perturb-seq perturbation response with uncertainty quantification.
   https://github.com/pleiadian53/genai-lab · https://pleiadian53.github.io/genai-lab/
 - **GRL** (open source): generalized reinforcement learning; actions as operators on state space
-  rather than discrete symbols, and the root of the action-operator idea ssl-lab now builds on.
+  rather than discrete symbols. The origin of the action-operator idea, which ssl-lab carries into
+  perturbations and world models and protein-ml-lab into the Lie-group symmetries of molecular
+  structure, while the formalism itself keeps maturing here.
   Originated in his doctoral work at the University of Texas at Arlington. Its first application
   was distributed computing for US ATLAS at Brookhaven National Laboratory, a Condor-based pilot
   factory for the PanDA workload management system, where physics jobs were scheduled as
@@ -128,12 +140,14 @@ Early lines, still finding their shape.
 - **pgm-lab** (open source): probabilistic graphical models: a reusable library of PGM building
   blocks plus research into novel methods, aimed at computational biology and physics.
   https://github.com/pleiadian53/pgm-lab
-- **protein-ml-lab** (not public yet): a depth study of the protein-ML stack: protein language
+- **protein-ml-lab** (open source, early stage): a depth study of the protein-ML stack: protein language
   models (ESM), structure prediction in the AlphaFold lineage, and generative design (RFdiffusion,
   ProteinMPNN, Chroma), with the cross-cutting frontier questions in biology foundation models.
   Protein structure lives on SE(3), so the equivariant architectures in that lineage are built on
   a group acting on a state space: the same object as the action operators in GRL and ssl-lab,
-  with the Lie algebra supplying the infinitesimal view.
+  with the Lie algebra supplying the infinitesimal view. Because the group is given by physics
+  rather than learned, it is where action-operator theory and implementation are developed
+  against a case with a known answer. https://github.com/pleiadian53/protein-ml-lab
 
 Earlier repositories are on the GitHub profile.
 
