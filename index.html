@@ -64,22 +64,38 @@
       scientific problems as the proving ground: noisy measurements, scarce labels, mechanisms
       only partly known, and simple baselines that are surprisingly hard to beat. My interest is
       in AI/ML for scientific discovery across <strong>biological and physical systems</strong>.</p>
-    <p>I am currently developing several ML/AI R&amp;D ideas, with biology as the main setting.
-      <strong>Generative and self-supervised methods</strong> (VAE families, diffusion, flow
-      matching, JEPA) aim to generate experimental data that can be trusted like measured data.
-      <strong>Action operators</strong> model an intervention as an operator acting on a state,
-      from a gene perturbation in a cell to the symmetries of molecular structure.
-      <strong>Agentic workflows</strong> keep a discovery pipeline current while its evidence is
-      still arriving. These ideas meet a concrete problem in <strong>RNA therapeutics</strong>,
-      splicing and decay, a line that began with my work at Envisagenics.</p>
-    <p>The action-operator idea is the oldest of these and runs through the rest. In
-      <strong>GRL</strong>, which began in my doctoral work, an action is not a discrete symbol but
-      a parametric operator that transforms the state space. Its first application was in physics
-      computing: a pilot factory for the US&nbsp;ATLAS experiment at Brookhaven National
-      Laboratory, which scheduled physics jobs as parametric actions. The idea returns now in GRL
-      itself, in the world models of ssl-lab, and in protein-ml-lab, where the operators are the
-      rotations and translations of a molecule in 3D space, known in advance rather than learned
-      from data. Physical systems remain a setting I would like to work in.</p>
+    <p>I am currently developing several ML/AI R&amp;D ideas, with biology as the main setting.</p>
+    <p>The first is <strong>generative modeling of experimental data</strong>. Generative models
+      can already produce realistic images and video, and I am developing methods that do the same
+      for biological experiments. For example, given a population of cells and a genetic
+      perturbation that has never been tested, the model should produce the gene-expression
+      measurements the experiment would have yielded, accurately enough that they could be used the
+      way measured data is. The methods draw on generative modeling and self-supervised learning:
+      VAE families, diffusion, flow matching and JEPA.</p>
+    <p>The second is <strong>action operators</strong>. Instead of treating an intervention, such as
+      switching on a gene in a cell, as a label attached to the data, the model represents it as a
+      mathematical operator that transforms the cell's state. Operators can be combined and
+      compared, so a question like "what happens when two genes are perturbed together" becomes a
+      question about how their two operators combine.</p>
+    <p>The third is <strong>agentic workflows</strong>: AI agents that search databases, the
+      literature and newly published results on their own. An analysis built this way can keep up
+      as new evidence appears, instead of staying frozen at the moment it was built.</p>
+    <p>All three meet a concrete problem in <strong>RNA therapeutics</strong>: how RNA is spliced
+      and decayed, a line that began with my work at Envisagenics.</p>
+    <p>The action-operator idea is the oldest of these, and it connects several of my projects.
+      In <strong>GRL</strong>, which began in my doctoral work, an action is not a discrete symbol
+      but a parametric operator that transforms the state space. Its first application was in
+      physics computing: a pilot factory for the US&nbsp;ATLAS experiment at Brookhaven National
+      Laboratory, which scheduled physics jobs as parametric actions.</p>
+    <p>Today the idea shows up in three places. GRL is still where the formalism itself is
+      developed. In ssl-lab, the work starts with gene perturbation: a
+      perturbation is represented as an operator that carries a cell's state from its unperturbed
+      form to its perturbed form. The longer-term goal there is world models that roll a state
+      forward under a sequence of interventions, for example tracking a person's health under
+      changes in sleep, diet or medication. In protein-ml-lab, the operators are the rotations and
+      translations of a molecule in 3D space. These are known in advance rather than learned from
+      data, which makes protein structure a place to test operator methods where the right answer
+      is known. Physical systems remain a setting I would like to work in.</p>
     <p>Agentic workflows, developed in agentic-ai-lab and openclaw-py, suit scientific discovery
       in particular, because the ground keeps moving: assays are re-run, annotations revised, and
       results published between one release and the next. A fixed pipeline has no way to go and

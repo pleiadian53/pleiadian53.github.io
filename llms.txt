@@ -23,27 +23,44 @@ as the proving ground: noisy measurements, scarce labels, mechanisms only partly
 baselines that are surprisingly hard to beat. His interest is in AI/ML for scientific discovery
 across **biological and physical systems**.
 
-He is currently developing several ML/AI R&D ideas, with biology as the main setting:
+He is currently developing several ML/AI R&D ideas, with biology as the main setting.
 
-- Generative and self-supervised methods (VAE families, diffusion, flow matching, JEPA), aimed at
-  generating experimental data that can be trusted like measured data (ssl-lab, genai-lab,
-  tabular-icl-lab).
-- Action operators, which model an intervention as an operator acting on a state, from a gene
-  perturbation in a cell to the symmetries of molecular structure (GRL, ssl-lab, protein-ml-lab).
-- Agentic workflows that keep a discovery pipeline current while its evidence is still arriving
-  (agentic-ai-lab, openclaw-py, agentic-spliceai).
+The first is generative modeling of experimental data (ssl-lab, genai-lab, tabular-icl-lab).
+Generative models can already produce realistic images and video, and he is developing methods
+that do the same for biological experiments. For example, given a population of cells and a
+genetic perturbation that has never been tested, the model should produce the gene-expression
+measurements the experiment would have yielded, accurately enough that they could be used the way
+measured data is. The methods draw on generative modeling and self-supervised learning: VAE
+families, diffusion, flow matching and JEPA.
 
-These ideas meet a concrete problem in RNA therapeutics, splicing and decay (agentic-spliceai,
-nmdiff), a line that began with his work at Envisagenics.
+The second is action operators (GRL, ssl-lab, protein-ml-lab). Instead of treating an
+intervention, such as switching on a gene in a cell, as a label attached to the data, the model
+represents it as a mathematical operator that transforms the cell's state. Operators can be
+combined and compared, so a question like "what happens when two genes are perturbed together"
+becomes a question about how their two operators combine.
 
-The action-operator idea is the oldest of these and runs through the rest. In GRL, which began in
-his doctoral work, an action is not a discrete symbol but a parametric operator that transforms
-the state space. Its first application was in physics computing: a pilot factory for the US ATLAS
-experiment at Brookhaven National Laboratory, which scheduled physics jobs as parametric actions.
-The idea returns now in GRL itself, in the world models of ssl-lab, and in protein-ml-lab, where
-the operators are the rotations and translations of a molecule in 3D space, known in advance
-rather than learned from data. Physical systems remain a setting he
-would like to work in.
+The third is agentic workflows (agentic-ai-lab, openclaw-py, agentic-spliceai): AI agents that
+search databases, the literature and newly published results on their own, so an analysis can keep
+up as new evidence appears instead of staying frozen at the moment it was built.
+
+All three meet a concrete problem in RNA therapeutics: how RNA is spliced and decayed
+(agentic-spliceai, nmdiff), a line that began with his work at Envisagenics.
+
+The action-operator idea is the oldest of these, and it connects several of his projects. In GRL,
+which began in his doctoral work, an action is not a discrete symbol but a parametric operator
+that transforms the state space. Its first application was in physics computing: a pilot factory
+for the US ATLAS experiment at Brookhaven National Laboratory, which scheduled physics jobs as
+parametric actions.
+
+Today the idea shows up in three places. GRL is still where the formalism itself is developed. In
+ssl-lab, the work
+starts with gene perturbation: a perturbation is represented as an operator that carries a cell's
+state from its unperturbed form to its perturbed form. The longer-term goal there is world models
+that roll a state forward under a sequence of interventions, for example tracking a person's health
+under changes in sleep, diet or medication. In protein-ml-lab, the operators are the rotations and
+translations of a molecule in 3D space. These are known in advance rather than learned from data,
+which makes protein structure a place to test operator methods where the right answer is known.
+Physical systems remain a setting he would like to work in.
 
 Agentic workflows suit scientific discovery in particular, because the ground keeps moving: assays
 are re-run, annotations revised, and results published between one release and the next, and a
