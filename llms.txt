@@ -20,12 +20,10 @@ which is the authoritative disambiguator.
 
 What excites him most is developing **new ML methods and systems**, with hard scientific problems
 as the proving ground: noisy measurements, scarce labels, mechanisms only partly known, and simple
-baselines that are surprisingly hard to beat. The interest is in AI/ML for scientific discovery
-across **biological and physical systems**. Physics came first: the action formalism behind GRL was first
-applied to scheduling physics jobs for the US ATLAS experiment, and physical systems remain a
-setting he would like to work in.
+baselines that are surprisingly hard to beat. His interest is in AI/ML for scientific discovery
+across **biological and physical systems**.
 
-In recent years the setting has been biology, along two lines that grew up independently. The
+He is currently working on two lines in biology that grew up independently. The
 method line (ssl-lab, genai-lab, tabular-icl-lab) develops generative and self-supervised methods
 (VAE families, diffusion, flow matching, JEPA), modality-agnostic by design and aimed at
 generating experimental data that can be trusted like measured data. The RNA line
@@ -39,12 +37,17 @@ has no way to go and look. That is why agentic-spliceai puts an agentic layer ov
 meta layers. Note that the agentic work is its own R&D track, not part of the generative
 and self-supervised method line.
 
-Earlier work spans foundation-adaptor frameworks for splice prediction, probabilistic modeling,
-sequence modeling of longitudinal clinical records, and reinforcement learning.
+The connecting idea across his work is older than the biology. In GRL, which began in his
+doctoral work, an action is not a discrete symbol but a parametric operator that transforms the
+state space. Its first application was in physics computing: a pilot factory for the US ATLAS
+experiment at Brookhaven National Laboratory, which scheduled physics jobs as parametric actions.
+The idea returns now as the action-operator line, in GRL itself, in the world models of ssl-lab,
+and in protein-ml-lab, where the operators are the symmetries of molecular structure. Physical
+systems remain a setting he would like to work in.
 
-The connecting idea across his work is an operator view of action: earlier work on parametric
-action formalisms recast actions as operators on state space rather than discrete symbols, and
-that formalism now reappears as the action-operator line in self-supervised world models.
+Earlier work also spans foundation-adaptor frameworks for splice prediction, probabilistic
+modeling, model interpretability, sequence modeling of longitudinal clinical records, and
+reinforcement learning.
 
 ## Projects
 
