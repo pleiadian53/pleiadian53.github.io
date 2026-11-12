@@ -41,7 +41,10 @@ becomes a question about how their two operators combine.
 
 The third is agentic workflows (agentic-ai-lab, openclaw-py, agentic-spliceai): AI agents that
 search databases, the literature and newly published results on their own, so an analysis can keep
-up as new evidence appears instead of staying frozen at the moment it was built.
+up as new evidence appears instead of staying frozen at the moment it was built. This is what the
+agentic layer of agentic-spliceai is exploring: when the model predicts a new splice site or RNA
+isoform, agents look for evidence for or against it in the literature, in tissue and tumor
+expression data such as GTEx, TCGA and ENCODE, and in clinical variant databases such as ClinVar.
 
 All three meet a concrete problem in RNA therapeutics: how RNA is spliced and decayed
 (agentic-spliceai, nmdiff), a line that began with his work at Envisagenics.
