@@ -146,8 +146,8 @@ Early lines, still finding their shape.
 - **pgm-lab** (open source): probabilistic graphical models: a reusable library of PGM building
   blocks plus research into novel methods, aimed at computational biology and physics.
   https://github.com/pleiadian53/pgm-lab
-- **protein-ml-lab** (open source, early stage): a depth study of the protein-ML stack: protein language
-  models (ESM), structure prediction in the AlphaFold lineage, and generative design (RFdiffusion,
+- **protein-ml-lab** (open source, early stage): new methods for modeling and designing proteins,
+  across the protein-ML stack: protein language models (ESM), structure prediction in the AlphaFold lineage, and generative design (RFdiffusion,
   ProteinMPNN, Chroma), with the cross-cutting frontier questions in biology foundation models.
   Protein structure lives on SE(3), so the equivariant architectures in that lineage are built on
   a group acting on a state space: the same object as the action operators in GRL and ssl-lab,
