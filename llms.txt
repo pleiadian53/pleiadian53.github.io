@@ -23,27 +23,31 @@ as the proving ground: noisy measurements, scarce labels, mechanisms only partly
 baselines that are surprisingly hard to beat. His interest is in AI/ML for scientific discovery
 across **biological and physical systems**.
 
-He is currently working on two lines in biology that grew up independently. The
-method line (ssl-lab, genai-lab, tabular-icl-lab) develops generative and self-supervised methods
-(VAE families, diffusion, flow matching, JEPA), modality-agnostic by design and aimed at
-generating experimental data that can be trusted like measured data. The RNA line
-(agentic-spliceai, nmdiff) covers splicing and decay, and began during his time at Envisagenics.
-The two lines are siblings rather than a pipeline.
+He is currently developing several ML/AI R&D ideas, with biology as the main setting:
 
-Alongside both runs agentic AI R&D, in agentic-ai-lab and openclaw-py. Agentic workflows suit
-scientific discovery in particular, because the ground keeps moving: assays are re-run,
-annotations revised, and results published between one release and the next, and a fixed pipeline
-has no way to go and look. That is why agentic-spliceai puts an agentic layer over its base and
-meta layers. Note that the agentic work is its own R&D track, not part of the generative
-and self-supervised method line.
+- Generative and self-supervised methods (VAE families, diffusion, flow matching, JEPA), aimed at
+  generating experimental data that can be trusted like measured data (ssl-lab, genai-lab,
+  tabular-icl-lab).
+- Action operators, which model an intervention as an operator acting on a state, from a gene
+  perturbation in a cell to the symmetries of molecular structure (GRL, ssl-lab, protein-ml-lab).
+- Agentic workflows that keep a discovery pipeline current while its evidence is still arriving
+  (agentic-ai-lab, openclaw-py, agentic-spliceai).
 
-The connecting idea across his work is older than the biology. In GRL, which began in his
-doctoral work, an action is not a discrete symbol but a parametric operator that transforms the
-state space. Its first application was in physics computing: a pilot factory for the US ATLAS
+These ideas meet a concrete problem in RNA therapeutics, splicing and decay (agentic-spliceai,
+nmdiff), a line that began during his time at Envisagenics.
+
+The action-operator idea is the oldest of these and runs through the rest. In GRL, which began in
+his doctoral work, an action is not a discrete symbol but a parametric operator that transforms
+the state space. Its first application was in physics computing: a pilot factory for the US ATLAS
 experiment at Brookhaven National Laboratory, which scheduled physics jobs as parametric actions.
-The idea returns now as the action-operator line, in GRL itself, in the world models of ssl-lab,
-and in protein-ml-lab, where the operators are the symmetries of molecular structure. Physical
-systems remain a setting he would like to work in.
+The idea returns now in GRL itself, in the world models of ssl-lab, and in protein-ml-lab, where
+the operators are given by physics rather than learned from data. Physical systems remain a setting he
+would like to work in.
+
+Agentic workflows suit scientific discovery in particular, because the ground keeps moving: assays
+are re-run, annotations revised, and results published between one release and the next, and a
+fixed pipeline has no way to go and look. That is why agentic-spliceai puts an agentic layer over
+its base and meta layers.
 
 Earlier work also spans foundation-adaptor frameworks for splice prediction, probabilistic
 modeling, model interpretability, sequence modeling of longitudinal clinical records, and
