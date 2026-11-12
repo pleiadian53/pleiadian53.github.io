@@ -77,9 +77,9 @@
       a parametric operator that transforms the state space. Its first application was in physics
       computing: a pilot factory for the US&nbsp;ATLAS experiment at Brookhaven National
       Laboratory, which scheduled physics jobs as parametric actions. The idea returns now in GRL
-      itself, in the world models of ssl-lab, and in protein-ml-lab, where the operators are given
-      by physics rather than learned from data. Physical systems remain a setting I would like to work
-      in.</p>
+      itself, in the world models of ssl-lab, and in protein-ml-lab, where the operators are the
+      rotations and translations of a molecule in 3D space, known in advance rather than learned
+      from data. Physical systems remain a setting I would like to work in.</p>
     <p>Agentic workflows, developed in agentic-ai-lab and openclaw-py, suit scientific discovery
       in particular, because the ground keeps moving: assays are re-run, annotations revised, and
       results published between one release and the next. A fixed pipeline has no way to go and
@@ -440,8 +440,9 @@
       <p>Protein structure lives on <strong>SE(3)</strong>, so the equivariant architectures in
         that lineage, from structure prediction to protein and antibody design, are built on a
         Lie group acting on a state space. That is the same object as the action operators in GRL
-        and ssl-lab, with the Lie algebra supplying the infinitesimal view. Here the group is given
-        by physics rather than learned, which makes this the place to develop action-operator
+        and ssl-lab, with the Lie algebra supplying the infinitesimal view. Here the operators, the
+        rotations and translations of a molecule in 3D space, are known in advance rather than
+        learned from data, which makes this the place to develop action-operator
         theory and implementation against a case where the right answer is known.</p>
     </article>
 

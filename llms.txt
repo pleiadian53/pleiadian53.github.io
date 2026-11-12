@@ -41,7 +41,8 @@ his doctoral work, an action is not a discrete symbol but a parametric operator 
 the state space. Its first application was in physics computing: a pilot factory for the US ATLAS
 experiment at Brookhaven National Laboratory, which scheduled physics jobs as parametric actions.
 The idea returns now in GRL itself, in the world models of ssl-lab, and in protein-ml-lab, where
-the operators are given by physics rather than learned from data. Physical systems remain a setting he
+the operators are the rotations and translations of a molecule in 3D space, known in advance
+rather than learned from data. Physical systems remain a setting he
 would like to work in.
 
 Agentic workflows suit scientific discovery in particular, because the ground keeps moving: assays
@@ -158,8 +159,8 @@ Early lines, still finding their shape.
   ProteinMPNN, Chroma), with the cross-cutting frontier questions in biology foundation models.
   Protein structure lives on SE(3), so the equivariant architectures in that lineage are built on
   a group acting on a state space: the same object as the action operators in GRL and ssl-lab,
-  with the Lie algebra supplying the infinitesimal view. Because the group is given by physics
-  rather than learned, it is where action-operator theory and implementation are developed
+  with the Lie algebra supplying the infinitesimal view. Because these operators, the rotations and
+  translations of a molecule in 3D space, are known in advance rather than learned from data, it is where action-operator theory and implementation are developed
   against a case with a known answer. https://github.com/pleiadian53/protein-ml-lab
 
 Earlier repositories are on the GitHub profile.
