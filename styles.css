@@ -376,6 +376,12 @@ a:focus-visible {
   padding: 0.75rem 1rem;
 }
 
+/* The per-idea zoom-in sits in the reading column, so it scales to that width
+   and only scrolls below 540px, instead of the full map's 720px minimum. */
+.schematic.ideas { margin: 1.5rem 0; }
+.schematic.ideas svg { min-width: 540px; }
+.schematic.ideas .edgelab text { font-size: 13px; letter-spacing: 0.02em; }
+
 .schematic .node rect {
   fill: var(--paper);
   stroke: var(--hair);

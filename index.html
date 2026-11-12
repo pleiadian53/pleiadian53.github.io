@@ -86,6 +86,94 @@
       such as ClinVar.</p>
     <p>All three meet a concrete problem in <strong>RNA therapeutics</strong>: how RNA is spliced
       and decayed, a line that began with my work at Envisagenics.</p>
+    <figure class="schematic ideas">
+      <div class="scroller" tabindex="0" role="group" aria-label="Diagram of the three R&amp;D ideas, scrollable">
+        <svg viewBox="0 0 640 494" role="img" aria-labelledby="ideas-t ideas-d">
+          <title id="ideas-t">Which projects carry each R&amp;D idea</title>
+          <desc id="ideas-d">Three panels. Generative modeling of experimental data: methods
+            developed in ssl-lab move to genai-lab once they mature, and ssl-lab's perturbation data,
+            with the additive baseline a model must beat, seed tabular-icl-lab. Action operators: the
+            operator formalism from GRL is applied in ssl-lab to gene perturbation and later to world
+            models, and is tested and refined in protein-ml-lab on rotations and translations of
+            molecules, with what is learned there flowing back to GRL. Agentic workflows: the Nexus
+            agent built in agentic-ai-lab became the evidence-gathering layer of agentic-spliceai, and
+            the agent work continues in openclaw-py, a private typed Python SDK.</desc>
+          <defs>
+            <marker id="ahz" class="mk" viewBox="0 0 8 8" refX="7.5" refY="4"
+                    markerWidth="5" markerHeight="5" markerUnits="strokeWidth"
+                    orient="auto-start-reverse">
+              <path d="M0.5 0.75 L7.5 4 L0.5 7.25 z"/>
+            </marker>
+            <marker id="ahz-dash" class="mk mk-dash" viewBox="0 0 8 8" refX="7.5" refY="4"
+                    markerWidth="5" markerHeight="5" markerUnits="strokeWidth"
+                    orient="auto-start-reverse">
+              <path d="M0.5 0.75 L7.5 4 L0.5 7.25 z"/>
+            </marker>
+          </defs>
+          <g class="tracklab"><text x="8" y="14">Generative modeling of experimental data</text></g>
+          <g class="edge">
+            <path d="M154 88 H196 V56 H450" marker-end="url(#ahz)"/>
+            <path d="M154 88 H196 V120 H450" class="dash" marker-end="url(#ahz-dash)"/>
+          </g>
+          <g class="edgelab">
+            <text x="323" y="33" text-anchor="middle">methods move here</text>
+            <text x="323" y="48" text-anchor="middle">once they mature</text>
+            <text x="323" y="97" text-anchor="middle">perturbation data, and the</text>
+            <text x="323" y="112" text-anchor="middle">additive baseline to beat</text>
+          </g>
+          <g class="node">
+            <rect x="8" y="68" width="146" height="40" rx="3" class="hot"/>
+            <text x="81" y="94">ssl-lab</text>
+            <rect x="450" y="36" width="182" height="40" rx="3"/>
+            <text x="541" y="62">genai-lab</text>
+            <rect x="450" y="100" width="182" height="40" rx="3"/>
+            <text x="541" y="126">tabular-icl-lab</text>
+          </g>
+          <g class="tracklab"><text x="8" y="186">Action operators</text></g>
+          <g class="edge">
+            <path d="M154 260 H196 V228 H450" marker-end="url(#ahz)"/>
+            <path d="M154 260 H196 V292 H450" class="dash" marker-start="url(#ahz-dash)" marker-end="url(#ahz-dash)"/>
+          </g>
+          <g class="edgelab">
+            <text x="323" y="205" text-anchor="middle">applied to gene perturbation,</text>
+            <text x="323" y="220" text-anchor="middle">later to world models</text>
+            <text x="323" y="269" text-anchor="middle">theory tested and refined on</text>
+            <text x="323" y="284" text-anchor="middle">rotations and translations</text>
+          </g>
+          <g class="node">
+            <rect x="8" y="240" width="146" height="40" rx="3"/>
+            <text x="81" y="266">GRL</text>
+            <rect x="450" y="208" width="182" height="40" rx="3" class="hot"/>
+            <text x="541" y="234">ssl-lab</text>
+            <rect x="450" y="272" width="182" height="40" rx="3"/>
+            <text x="541" y="298">protein-ml-lab</text>
+          </g>
+          <g class="tracklab"><text x="8" y="358">Agentic workflows</text></g>
+          <g class="edge">
+            <path d="M154 432 H196 V400 H450" marker-end="url(#ahz)"/>
+            <path d="M154 432 H196 V464 H450" marker-end="url(#ahz)"/>
+          </g>
+          <g class="edgelab">
+            <text x="323" y="377" text-anchor="middle">Nexus agent became its</text>
+            <text x="323" y="392" text-anchor="middle">evidence-gathering layer</text>
+            <text x="323" y="441" text-anchor="middle">agent work continues as</text>
+            <text x="323" y="456" text-anchor="middle">a typed Python SDK</text>
+          </g>
+          <g class="node">
+            <rect x="8" y="412" width="146" height="40" rx="3"/>
+            <text x="81" y="438">agentic-ai-lab</text>
+            <rect x="450" y="380" width="182" height="40" rx="3" class="hot"/>
+            <text x="541" y="406">agentic-spliceai</text>
+            <rect x="450" y="444" width="182" height="40" rx="3" class="priv"/>
+            <text x="541" y="470">openclaw-py</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Each panel shows the projects that carry one of the three ideas above. Solid
+        arrows carry code or methods from one project into another; dashed arrows carry data or
+        ideas that are borrowed rather than forked.
+        <span class="key"><span class="sw priv-sw"></span>private</span></figcaption>
+    </figure>
     <p>The action-operator idea is the oldest of these, and it connects several of my projects.
       In <strong>GRL</strong>, which began in my doctoral work, an action is not a discrete symbol
       but a parametric operator that transforms the state space. Its first application was in

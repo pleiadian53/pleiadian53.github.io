@@ -56,6 +56,12 @@ Those are separate repositories on separate paths.
   private one in dashed copper. Directed edges carry `marker-end="url(#ah)"` (`#ah-dash` and
   `#ah-bi` match the dashed and copper strokes); edges left unarrowed read as associations. Keep
   the `<desc>` in sync; it is what screen readers and crawlers read.
+- **The per-idea figure**: a second, smaller SVG in the About section (`figure.schematic.ideas`,
+  640-wide canvas) with one panel per R&D idea: generative modeling of experimental data, action
+  operators, agentic workflows. Each panel is one left node and two right nodes joined by labeled
+  elbow edges. It is the zoom-in level: a new project goes into the panel of the idea it serves,
+  and the overview map above only gains a node when the project starts a new lineage. Its markers
+  are `#ahz` and `#ahz-dash`; keep its `<desc>` in sync too.
 - **`llms.txt`**: mirrors the page in prose. Update it whenever a project is added or its
   description changes materially, otherwise the two drift.
 - **Staying in sync with the profile README**: the same facts are hand-written in three places
